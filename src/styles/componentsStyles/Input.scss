@@ -100,8 +100,7 @@ body{
         transition: .4s;
         width: 20px;
     }
-    
-    
+
     input:checked + .slider:before {
         transform: translateX(28px);
     }

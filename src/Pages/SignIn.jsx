@@ -1,21 +1,17 @@
-import React, { Component }  from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/Pages Styles/SignIn.scss'
-import Logo from '../Assets/Icons/logo.svg'
+import '../styles/PagesStyles/SignIn.scss';
+import Logo from '../Assets/Icons/logo.svg';
+import Input from '../components/Input';
+import ButtonWhite from '../components/ButtonWhite';
 
-
-export default class SignIn extends Component {
-
-    render() {
+ const SignIn = () => {
         return(
             <main className='mainSignIn'>
                 <img src={Logo} alt='Logo' />
                 <form className='mainSignIn__form'>
-                    <label>e-mail</label>
-                    <input type='email' placeholder='email' name='email' />
-
-                    <label>Password</label>
-                    <input type='password' placeholder='password' name='password' />
+                    <Input type='email' placeholder='e-mail' name='email' InputName='e-mail'/>
+                    <Input type='password' placeholder='password' name='password' InputName='Password'/>                  
                     <div className="theme-switch-wrapper">
                         <p>Mantener la sesion abierta</p>
                         <label className="theme-switch">
@@ -23,7 +19,7 @@ export default class SignIn extends Component {
                             <div className="slider round"></div>
                         </label>
                     </div> 
-                    <button className='mainSignIn__form--signIn' type='button'>Login</button>
+                    <ButtonWhite text='Login'/>
                     <section className='mainSignIn__form--link'>
                         <Link to='/'>Olvide mi contraseña</Link>
                         <Link to='/'>Crear una cuenta</Link>
@@ -32,4 +28,5 @@ export default class SignIn extends Component {
             </main>
         )
     }
-}
+
+    export default SignIn;

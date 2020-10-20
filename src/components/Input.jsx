@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 
-const Input = (props) => {
+const Input = ({InputName, type, placeholder, name}) => {
     return (
         <Fragment>
-            <input type={props} placeholder={props} name={props} />
-            <h1>Texto</h1>
+            <h4>{InputName}</h4>
+            <input type={type} placeholder={placeholder} name={name} />
         </Fragment>
     );
 }
