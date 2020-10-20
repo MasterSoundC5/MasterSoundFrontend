@@ -1,7 +1,7 @@
 import React, { Component }  from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Pages Styles/SignIn.scss'
-import Logo from '../Assets/Icons/Logo Master Sound.png'
+import Logo from '../Assets/Icons/logo.svg'
 
 
 export default class SignIn extends Component {

@@ -101,6 +101,7 @@ body{
         width: 20px;
     }
     
+    
     input:checked + .slider:before {
         transform: translateX(28px);
     }
@@ -112,4 +113,5 @@ body{
     .slider.round:before {
         border-radius: 50%;
     }
+
 }

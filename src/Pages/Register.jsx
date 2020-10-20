@@ -1,26 +1,26 @@
 import React, { Component }  from 'react';
-import { Link } from 'react-router-dom';
-import '../styles/Pages Styles/SignIn.scss'
-import Logo from '../Assets/Icons/Logo Master Sound.png'
-
+import Input from '../components/Input';
+import '../styles/Pages Styles/Register.scss';
+import Logo from '../Assets/Icons/logo.svg'
 
 export default class Register extends Component {
 
     render() {
         return(
-            <main className='mainSignIn'>
+            <main className='mainRegister'>
                 <img src={Logo} alt='Logo' />
                 <form className='mainSignIn__form'>
                     <label>Nombre de Usuario</label>
-                    <input type='text' placeholder='Nombre de Usuario' name='username' />
+                    <Input type='text' placeholder='Nombre de Usuario' name='username' />
                     <label>e-mail</label>
-                    <input type='e-mail' placeholder='e-mail' name='e-mail' />
+                    <Input type='email' placeholder='e-mail' name='e-mail' />
                     <label>Password</label>
-                    <input type='password' placeholder='password' name='password' />
+                    <Input type='password' placeholder='password' name='password' />
                     <label>Confirmar Password</label>
-                    <input type='password' placeholder='password' name='password' />
+                    <Input type='password' placeholder='password' name='password' />
                     <button className='mainSignIn__form--Register' type='button'>Crear Cuenta</button>
                 </form>
+
             </main>
         )
     }
