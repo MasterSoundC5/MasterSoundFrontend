@@ -25,27 +25,6 @@ body{
         label {
             margin-left: 20px;
         }
-        input {
-            @include Input(42vmax, 44px, 14px, 25px)
-        }
-        &--sesion {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            width: 100%;
-            border: 1px solid yellow;
-            input {
-                @include Button(35px, 20px);
-            }
-        }
-        &--signIn {
-            cursor: pointer;
-            @include Button(107px, 44px);
-        }
-        &--Register {
-            cursor: pointer;
-            @include Button(161px, 44px);
-        }
         &--link {
             display: flex;
             flex-direction: column;
