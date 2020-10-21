@@ -1,10 +1,13 @@
 import React, { Component }  from 'react';
-import '../styles/App.scss';
+import Logo from '../Assets/Icons/logo.svg';
+import '../styles/PagesStyles/Home.scss';
 
 export default class Home extends Component {
     render() {
         return(
-            <h1>Home</h1>
+            <div className='home'>
+                <img src={Logo} alt='logo' />
+            </div>
         )
     }
 }
