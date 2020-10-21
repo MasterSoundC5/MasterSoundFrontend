@@ -1,20 +1,20 @@
 @import '../App.scss';
 
-.button{
+.button-purple{
     background-color: transparent;
-    color: #F2EBEF;
-    border: 2px solid #F2EBEF;
+    color: #A414A5;
+    border: 2px solid #A414A5;
     font-size: 20px;
     cursor: pointer;
     width: 10vw;
     height: 44px;
-    border-radius: 10px;
+    border-radius:10px;
     outline: inherit;
-    margin: 22px auto 22px;;
+    margin: 22px auto 22px;
 }
 
-.button:hover {
+.button-purple:hover {
   color: #031D25;
-  background-color: #F2EBEF;
+  background-color: #A414A5;
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
 }

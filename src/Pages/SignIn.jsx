@@ -19,7 +19,7 @@ import ButtonWhite from '../components/ButtonWhite';
                             <div className="slider round"></div>
                         </label>
                     </div> 
-                    <ButtonWhite text='Login' className='button-Login' />
+                    <ButtonWhite text='Login' className='button' />
                     <section className='mainSignIn__form--link'>
                         <Link to='/'>Olvide mi contraseña</Link>
                         <Link to='/register'>Crear una cuenta</Link>

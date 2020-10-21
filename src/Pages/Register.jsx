@@ -19,7 +19,7 @@ export default class Register extends Component {
                     <Input type='password' placeholder='password' name='password' />
                     <label>Confirmar Password</label>
                     <Input type='password' placeholder='password' name='password' />
-                    <ButtonWhite text='Crear Cuenta' className='button-Register' />
+                    <ButtonWhite text='Crear Cuenta' className='button' />
                 </form>
 
             </main>
