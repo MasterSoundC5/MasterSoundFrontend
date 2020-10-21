@@ -10,7 +10,7 @@ import ButtonWhite from '../components/ButtonWhite';
             <main className='mainSignIn'>
                 <img src={Logo} alt='Logo' />
                 <form className='mainSignIn__form'>
-                    <Input type='email' placeholder='e-mail' name='email' InputName='e-mail'/>
+                    <Input type='email' placeholder='e-mail' name='email' InputName='e-mail' />
                     <Input type='password' placeholder='password' name='password' InputName='Password'/>                  
                     <div className="theme-switch-wrapper">
                         <p>Mantener la sesion abierta</p>
@@ -19,10 +19,10 @@ import ButtonWhite from '../components/ButtonWhite';
                             <div className="slider round"></div>
                         </label>
                     </div> 
-                    <ButtonWhite text='Login'/>
+                    <ButtonWhite text='Login' className='button-Login' />
                     <section className='mainSignIn__form--link'>
                         <Link to='/'>Olvide mi contraseña</Link>
-                        <Link to='/'>Crear una cuenta</Link>
+                        <Link to='/register'>Crear una cuenta</Link>
                     </section>
                 </form>
             </main>

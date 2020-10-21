@@ -1,7 +1,8 @@
 import React, { Component }  from 'react';
 import Input from '../components/Input';
-import '../styles/Pages Styles/Register.scss';
-import Logo from '../Assets/Icons/logo.svg'
+import '../styles/PagesStyles/Register.scss';
+import Logo from '../Assets/Icons/logo.svg';
+import ButtonWhite from '../components/ButtonWhite';
 
 export default class Register extends Component {
 
@@ -18,7 +19,7 @@ export default class Register extends Component {
                     <Input type='password' placeholder='password' name='password' />
                     <label>Confirmar Password</label>
                     <Input type='password' placeholder='password' name='password' />
-                    <button className='mainSignIn__form--Register' type='button'>Crear Cuenta</button>
+                    <ButtonWhite text='Crear Cuenta' className='button-Register' />
                 </form>
 
             </main>

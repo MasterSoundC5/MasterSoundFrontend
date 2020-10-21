@@ -11,35 +11,3 @@ $weight1: 200;
 $weight2: 400;
 $weight3: 600;
 $Source-Pro: 'Source Sans Pro', sans-serif;
-
-@mixin Input($width, $height, $marginT, $marginB) {
-    display: flex;
-    align-items: center;
-    width: $width;
-    height: $height;
-    margin: $marginT auto $marginB;
-    background-size: 25px;
-    padding-left: 30px;
-    border-radius: 20px;
-    border: 2px solid #F2EBEF;
-    background: transparent;
-    font-size: 18px;
-    font-weight: 600;
-    color: rgba(242, 235, 239, 1);
-}
-
-@mixin Button($width, $height) {
-    display: flex;
-    align-items: center;
-    width: $width;
-    height: $height;
-    margin: 22px auto 22px;
-    background-size: 25px;
-    padding-left: 30px;
-    border-radius: 20px;
-    border: 2px solid #F2EBEF;
-    background: transparent;
-    font-size: 16px;
-    font-weight: 600;
-    color: white;
-}

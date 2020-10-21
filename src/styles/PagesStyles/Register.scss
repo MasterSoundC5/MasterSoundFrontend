@@ -5,7 +5,7 @@ body{
     height: 100%;
 }
 
-.mainSignIn {
+.mainRegister {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,23 +24,6 @@ body{
         justify-content: center;
         label {
             margin-left: 20px;
-        }
-        input {
-            @include Input(42vmax, 44px, 14px, 25px)
-        }
-        &--sesion {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            width: 100%;
-            border: 1px solid yellow;
-            input {
-                @include Button(35px, 20px);
-            }
-        }
-        &--Register {
-            cursor: pointer;
-            @include Button(161px, 44px);
         }
         &--link {
             display: flex;
