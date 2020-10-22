@@ -1,0 +1,18 @@
+@import '../App.scss';
+
+.CircleAlbum__container{
+    width: 112px;
+    height: 134px;
+    display: flex;
+    flex-direction: column;
+}
+.CircleAlbum__container img {
+        width: 112px;
+        height: 112px;
+        border-radius: 50%;
+    }
+.CircleAlbum__container p {
+    font-size: 10px;
+    align-self: center;
+    margin-top: 10px;
+}
