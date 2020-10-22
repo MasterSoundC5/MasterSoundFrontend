@@ -1,17 +1,14 @@
-@import '../App.scss';
+@import "../App.scss";
 
-body{
-    background: $Color-Fondo;
-    height: 100%;
+body {
+  background: $Color-Fondo;
+  height: 100%;
 }
 
 .home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: $Source-Pro;
-    font-weight: $weight3;
-    color: white;
-    height: 100vh;
+  display: flex;
+  font-family: $Source-Pro;
+  font-weight: $weight3;
+  color: white;
+  height: 100vh;
 }
