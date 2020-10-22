@@ -1,0 +1,25 @@
+@import '../App.scss';
+
+.enlacesLaterales {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    background: transparent;
+    cursor: pointer;
+    img {
+        width: 18px;
+        height: 18px;
+        margin: 0px 15px 0px 24px;
+    }
+    p {
+        color: #F2EBEF;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 16px;
+        margin: 13px 0px;
+        opacity: 0.5;
+    }
+    p:hover {
+        opacity: 1;
+    }
+}
