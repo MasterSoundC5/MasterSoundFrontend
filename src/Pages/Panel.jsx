@@ -1,7 +1,7 @@
 import React, { Component }  from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/PagesStyles/Panel.scss';
-import EnlacesLaterales from '../components/EnlacesLaterales';
+import SideLinks from '../components/SideLinks';
 import Logo from '../Assets/Icons/logo.svg';
 
 import Discover from '../Assets/Icons/Discover.svg';
@@ -21,17 +21,17 @@ export default class Panel extends Component {
         return(
             <div className='panel'>
                 <img className='panel__logo' src={Logo} alt='Logo' />
-                <EnlacesLaterales img={Discover} text='Discover' />
-                <EnlacesLaterales img={Songs} text='Songs' />
-                <EnlacesLaterales img={Albums} text='Albums' />
-                <EnlacesLaterales img={Artists} text='Artists' />
-                <EnlacesLaterales img={YouTube} text='YouTube' />
+                <SideLinks img={Discover} text='Discover' />
+                <SideLinks img={Songs} text='Songs' />
+                <SideLinks img={Albums} text='Albums' />
+                <SideLinks img={Artists} text='Artists' />
+                <SideLinks img={YouTube} text='YouTube' />
                 
                 <p className='panel__p'>My Tracks</p>
-                <EnlacesLaterales img={Favourite} text='Favourite' />
-                <EnlacesLaterales img={Recent_History} text='Recent History' />
-                <EnlacesLaterales img={Download_Items} text='Download Items' />
-                <EnlacesLaterales img={Local_Files} text='Local Files' />
+                <SideLinks img={Favourite} text='Favourite' />
+                <SideLinks img={Recent_History} text='Recent History' />
+                <SideLinks img={Download_Items} text='Download Items' />
+                <SideLinks img={Local_Files} text='Local Files' />
 
                 <div className='PlayList'>
                     <p className='PlayList__p'>Playlist</p>
@@ -39,10 +39,10 @@ export default class Panel extends Component {
                         <img className='PlayList__img' src={Plus} alt='Agregar' />
                     </Link>
                 </div>
-                <EnlacesLaterales img={Add} text='Bangla' />
-                <EnlacesLaterales img={Add} text='English' />
-                <EnlacesLaterales img={Add} text='My Style' />
-                <EnlacesLaterales img={Add} text='Hindi' />
+                <SideLinks img={Add} text='Bangla' />
+                <SideLinks img={Add} text='English' />
+                <SideLinks img={Add} text='My Style' />
+                <SideLinks img={Add} text='Hindi' />
             </div>
         )
     }

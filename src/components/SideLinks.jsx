@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/componentsStyles/EnlacesLaterales.scss';
+import '../styles/componentsStyles/SideLinks.scss';
 
-const EnlacesLaterales = ({img, text}) => {
+const SideLinks = ({img, text}) => {
     return (
         <Fragment>
-        <Link to='/' className='enlacesLaterales'>
+        <Link to='/' className='SideLinks'>
             <img src={img} alt={text} />
             <p>{text}</p>
         </Link>
@@ -13,4 +13,4 @@ const EnlacesLaterales = ({img, text}) => {
     );
 }
  
-export default EnlacesLaterales;
+export default SideLinks;
