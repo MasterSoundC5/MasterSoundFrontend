@@ -8,7 +8,6 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100vw;
   height: 39px;
   border-radius: 3px;
   background: transparent;
@@ -51,8 +50,12 @@ body {
       margin: 16px 37px 12px 0px;
   }
   &__Song {
-      margin: 14px 0px 14px 0px;
-      width: 170px;
+    margin: 14px 0px 14px 0px;
+    width: 170px;
+    color: #F2EBEF;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
   }
   &__Reproductions {
       margin: 14px 0px 14px 0px;

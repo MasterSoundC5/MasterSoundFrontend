@@ -16,7 +16,7 @@ const ListAlbum = ({number, icon, song, reproductions, time}) => {
                 <button className='listAlbum__Plus'>
                     {<PlusIcon />}
                 </button>
-                <p className='listAlbum__Song'>{song}</p>
+                <button className='listAlbum__Song'>{song}</button>
                 <p className='listAlbum__Reproductions'>{reproductions}</p>
                 <p className='listAlbum__Time'>{time}</p>
                 <button className='listAlbum__Download'>
