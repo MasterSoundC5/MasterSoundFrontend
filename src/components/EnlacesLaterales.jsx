@@ -2,11 +2,11 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/componentsStyles/EnlacesLaterales.scss';
 
-const EnlacesLaterales = ({img, text}) => {
+const EnlacesLaterales = ({icon, text}) => {
     return (
         <Fragment>
         <Link to='/' className='enlacesLaterales'>
-            <img src={img} alt={text} />
+             {icon}
             <p>{text}</p>
         </Link>
         </Fragment>
