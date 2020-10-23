@@ -1,0 +1,25 @@
+@import '../App.scss';
+
+.SquareAlbum__container{
+  display: flex;
+  flex-direction: column;
+  width: 112px;
+  height: 154px;
+}
+.SquareAlbum__container img {
+  width: 112px;
+  height: 112px;
+  border-radius: 3px;
+}
+.SquareAlbum__container p {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.SquareAlbum__container span {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 600;
+  opacity: 0.48;
+}
