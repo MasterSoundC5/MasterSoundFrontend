@@ -1,0 +1,81 @@
+@import "../App.scss";
+
+body {
+    background: rgba(0, 0, 0, 0.822);
+}
+
+.listAlbum {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100vw;
+  height: 39px;
+  border-radius: 3px;
+  background: transparent;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  opacity: 0.5;
+  color: #F2EBEF;
+  &:hover{
+    opacity: 1;
+    svg, p {
+        color: $font-color;
+        stroke: $font-color;
+        fill: $font-color;
+    }
+  }
+  &:active{        
+		position:relative;
+		top:1px;
+  }
+  button {
+      background: transparent;
+      cursor: pointer;
+  }
+  svg {
+      width: 15px;
+      height: 15px;
+      fill: $font-color;
+      stroke: $font-color;
+		  stroke-width: 0.3;
+  }
+  &__Number {
+      margin: 14px 0px 14px 16px;
+      width: 54px;
+  }
+  &__Favourite {
+      margin: 16px 33px 12px 0px;
+  }
+  &__Plus {
+      margin: 16px 37px 12px 0px;
+  }
+  &__Song {
+      margin: 14px 0px 14px 0px;
+      width: 170px;
+  }
+  &__Reproductions {
+      margin: 14px 0px 14px 0px;
+      width: 63px;
+  }
+  &__Time {
+    margin: 14px 10px 14px 0px;
+    width: 44px;
+  }
+  &__Download {
+    margin: 16px 34px 12px 0px;
+  }
+  &__Share {
+    margin: 16px 33px 12px 0px;
+  }
+  &__Points {
+    color: #F2EBEF;
+    opacity: 0.5;
+    font-size: 25px;
+    margin: 2px 65px 18px 0px;
+  }
+}
+
+.listAlbum:hover {
+    background-color: #670431;
+}
