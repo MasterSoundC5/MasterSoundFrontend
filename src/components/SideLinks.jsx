@@ -5,7 +5,7 @@ import '../styles/componentsStyles/SideLinks.scss';
 const SideLinks = ({icon, text}) => {
     return (
         <Fragment>
-        <Link to='/' className='enlacesLaterales'>
+        <Link to='/' className='SideLinks'>
              {icon}
             <p>{text}</p>
         </Link>
