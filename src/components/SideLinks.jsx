@@ -2,11 +2,11 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/componentsStyles/SideLinks.scss';
 
-const SideLinks = ({img, text}) => {
+const SideLinks = ({icon, text}) => {
     return (
         <Fragment>
         <Link to='/' className='SideLinks'>
-            <img src={img} alt={text} />
+             {icon}
             <p>{text}</p>
         </Link>
         </Fragment>
