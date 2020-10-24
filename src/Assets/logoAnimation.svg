@@ -50,23 +50,22 @@
 	}
 
 	.st2{
-		<!-- fill:url(#SVGID_1_); -->
 		fill:transparent;
 		stroke:#F3EBEF;
 		stroke-width:4;
 		stroke-miterlimit:10;
 			stroke-dasharray: 1000;
 			stroke-dashoffset: 0;
-			-webkit-animation: animationLogo-2 7s forwards;
-			-moz-animation: animationLogo-2 7s forwards;
-			-o-animation: animationLogo-2 7s forwards;
-			animation: animationLogo-2 7s forwards;
+			-webkit-animation: animationLogo-2 4s forwards;
+			-moz-animation: animationLogo-2 4s forwards;
+			-o-animation: animationLogo-2 4s forwards;
+			animation: animationLogo-2 4s forwards;
 		}
 		@-webkit-keyframes animationLogo-2 {
 		0%{
 			stroke-dashoffset: 0;
 		}
-		70%{
+		40%{
 			fill: transparent;
 		}
 		100%{
@@ -94,17 +93,17 @@
 		stroke-miterlimit:10;
 			stroke-dasharray: 1100;
 			stroke-dashoffset: 0;
-			-webkit-animation: animationLogoDetalle 4s forwards;
-			-moz-animation: animationLogoDetalle 4s forwards;
-			-o-animation: animationLogoDetalle 4s forwards;
-			animation: animationLogoDetalle 4s forwards;
+			-webkit-animation: animationLogoDetalle3s forwards;
+			-moz-animation: animationLogoDetalle 3s forwards;
+			-o-animation: animationLogoDetalle 3s forwards;
+			animation: animationLogoDetalle 3s forwards;
 		}
 		@-webkit-keyframes animationLogoDetalle {
 		0%{
 			stroke-dashoffset: 1100;
 			
 		}
-		50%{
+		40%{
 			fill: transparent;
 		}
 		100%{
@@ -117,7 +116,7 @@
 			stroke-dashoffset: 1100;
 			
 		}
-		50%{
+		40%{
 			fill: transparent;
 		}
 		100%{
@@ -126,7 +125,6 @@
 		}
 	}
 	.st4{
-		<!-- fill:#5D378D; -->
 		fill:transparent;
 		stroke:#F3EBEF;
 		stroke-width:4;
