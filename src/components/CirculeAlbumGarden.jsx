@@ -11,6 +11,7 @@ const CircleAlbumGarden = ({ SectionName }) => {
             <section className='NameSection'>
                 <h3>{SectionName}</h3>
             </section>
+            <section className='AlbumSection'>
                 <CircleAlbum AlbumName='Rolling Stones'/>
                 <CircleAlbum AlbumName='Rolling Stones'/>
                 <CircleAlbum AlbumName='Rolling Stones'/>
@@ -27,6 +28,7 @@ const CircleAlbumGarden = ({ SectionName }) => {
                 <CircleAlbum AlbumName='Rolling Stones'/>
                 <CircleAlbum AlbumName='Rolling Stones'/>
                 <CircleAlbum AlbumName='Rolling Stones'/>
+            </section>
         </div>
     )
 }

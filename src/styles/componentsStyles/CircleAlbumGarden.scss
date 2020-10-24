@@ -2,16 +2,18 @@
 
 .CircleAlbum__garden{
     width: 85vw;
-    height: 210px;
-    display: flex;
     position: relative;
     margin-left: 30px;
-    margin-top: 30px;
-    transition: 450ms -webkit-transform;
-    transition: 450ms transform;
-    transition: 450ms transform, 450ms -webkit-transform;
-    padding-bottom: 10px;
-    overflow: auto;
+}
+.AlbumSection{
+  height: 210px;
+  display: flex;
+  margin-top: 30px;
+  transition: 450ms -webkit-transform;
+  transition: 450ms transform;
+  transition: 450ms transform, 450ms -webkit-transform;
+  padding-bottom: 10px;
+  overflow: auto;
 }
 .CircleAlbum__garden:hover .CircleAlbum__container {
   opacity: 0.3;
