@@ -14,4 +14,4 @@ const SquareAlbum = ({ album, artist }) => {
   )
 }
 
-export default SquareAlbum
+export default SquareAlbum;
