@@ -1,6 +1,6 @@
 import React, { Component }  from 'react';
 
-import Panel from '../Pages/Panel';
+import Panel from '../components/Panel';
 import '../styles/PagesStyles/Home.scss';
 import CircleAlbumGarden from '../components/CirculeAlbumGarden';
 import InfoAlbum from '../components/InfoAlbum';
