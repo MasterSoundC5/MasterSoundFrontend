@@ -12,17 +12,17 @@ function App() {
           <Route 
             exact 
             path='/' 
+            component={AnimationLoader} 
+          />
+          <Route 
+            exact 
+            path='/home' 
             component={Home} 
           />
           <Route 
             exact 
             path='/signin' 
             component={SignIn} 
-          />
-          <Route 
-            exact 
-            path='/animation' 
-            component={AnimationLoader} 
           />
           <Route 
             exact 
