@@ -12,20 +12,22 @@ const SquareAlbumGarden = ({ SectionName }) => {
                 <h3>{SectionName}</h3>
             </section>
             <section className='AlbumSection__Square'>
-                <SquareAlbum album='Test' artist='Fulanito perez' />
-                <SquareAlbum album='Test' artist='Fulanito perez' />
-                <SquareAlbum album='Test' artist='Fulanito perez' />
-                <SquareAlbum album='Test' artist='Fulanito perez' />
-                <SquareAlbum album='Test' artist='Fulanito perez' />
-                <SquareAlbum album='Test' artist='Fulanito perez' />
-                <SquareAlbum album='Test' artist='Fulanito perez' />
-                <SquareAlbum album='Test' artist='Fulanito perez' />
-                <SquareAlbum album='Test' artist='Fulanito perez' />
-                <SquareAlbum album='Test' artist='Fulanito perez' />
-                <SquareAlbum album='Test' artist='Fulanito perez' />
-                <SquareAlbum album='Test' artist='Fulanito perez' />
-                <SquareAlbum album='Test' artist='Fulanito perez' />
-                <SquareAlbum album='Test' artist='Fulanito perez' />
+                <SquareAlbum album='Let It Bleed' artist='Rolling Stones' />
+                <SquareAlbum album='Let It Bleed' artist='Rolling Stones' />
+                <SquareAlbum album='Let It Bleed' artist='Rolling Stones' />
+                <SquareAlbum album='Let It Bleed' artist='Rolling Stones' />
+                <SquareAlbum album='Let It Bleed' artist='Rolling Stones' />
+                <SquareAlbum album='Let It Bleed' artist='Rolling Stones' />
+                <SquareAlbum album='Let It Bleed' artist='Rolling Stones' />
+                <SquareAlbum album='Let It Bleed' artist='Rolling Stones' />
+                <SquareAlbum album='Let It Bleed' artist='Rolling Stones' />
+                <SquareAlbum album='Let It Bleed' artist='Rolling Stones' />
+                <SquareAlbum album='Let It Bleed' artist='Rolling Stones' />
+                <SquareAlbum album='Let It Bleed' artist='Rolling Stones' />
+                <SquareAlbum album='Let It Bleed' artist='Rolling Stones' />
+                <SquareAlbum album='Let It Bleed' artist='Rolling Stones' />
+                <SquareAlbum album='Let It Bleed' artist='Rolling Stones' />
+                
             </section>
         </div>
     )

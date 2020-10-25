@@ -12,22 +12,21 @@ const CircleAlbumGarden = ({ SectionName }) => {
                 <h3>{SectionName}</h3>
             </section>
             <section className='AlbumSection'>
-                <CircleAlbum AlbumName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Rolling Stones'/>
+                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
+                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
+                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
+                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
+                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
+                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
+                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
+                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
+                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
+                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
+                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
+                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
+                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
+                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
+                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
             </section>
         </div>
     )
