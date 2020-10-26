@@ -19,6 +19,7 @@ export default class Home extends Component {
                         <PurpleButtonGarden />
                         <InfoAlbum imgAlbum={AlbumArtist} NameAlbum='Illisions' Artist='Ibrahim Maalouf' Description='The artists we represent are one of the most successful in Romania and also were a huge breakthrough in the international market, topping radio and sales around the world.' />
                     </section>
+                    
                 </div>
         )
     }
