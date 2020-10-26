@@ -4,7 +4,7 @@ body {
     background: rgba(0, 0, 0, 0.822);
 }
 
-.listAlbum {
+.listTrack {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -51,22 +51,27 @@ body {
       margin: 16px 0px 12px 0px;
       width: 4.5vw;
   }
-  &__Plus {
-      margin: 16px 20px 12px 0px;
-      width: 4.5vw;
-  }
   &__Song {
     margin: 14px 0px 14px 0px;
-    width: 20vw;
+    width: 14vw;
     color: #F2EBEF;
     text-align: justify;
     font-size: 12px;
     line-height: 16px;
     font-weight: 600;
   }
-  &__Reproductions {
+  &__Artist {
       margin: 14px 0px 14px 0px;
-      width: 8vw;
+      color: #F2EBEF;
+      text-align: justify;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 600;
+      width: 12vw;
+  }
+  &__Reproductions {
+    margin: 14px 0px 14px 0px;
+    width: 8vw;
   }
   &__Time {
     margin: 14px 10px 14px 0px;
@@ -89,6 +94,6 @@ body {
   }
 }
 
-.listAlbum:hover {
+.listTrack:hover {
     background-color: #670431;
 }
