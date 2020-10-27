@@ -9,7 +9,7 @@ body {
   flex-direction: row;
   align-items: center;
   height: 39px;
-  max-width: 100%;
+  width: 100%;
   border-radius: 3px;
   background: transparent;
   font-size: 12px;
@@ -49,11 +49,11 @@ body {
   }
   &__Favourite {
       margin: 16px 0px 12px 0px;
-      width: 4.5vw;
+      width: 6vw;
   }
   &__Plus {
       margin: 16px 20px 12px 0px;
-      width: 4.5vw;
+      width: 6vw;
   }
   &__Song {
     margin: 14px 0px 14px 0px;
@@ -74,11 +74,11 @@ body {
   }
   &__Download {
     margin: 16px 0px 12px 0px;
-    width: 5vw;
+    width: 6vw;
   }
   &__Share {
     margin: 16px 0px 12px 0px;
-    width: 5vw;
+    width: 6vw;
   }
   &__Points {
     color: #F2EBEF;
