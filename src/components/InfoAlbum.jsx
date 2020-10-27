@@ -2,16 +2,19 @@ import React, { Fragment } from 'react';
 import ListAlbum from './ListAlbum';
 import '../styles/componentsStyles/InfoAlbum.scss';
 
-const InfoAlbum = ({imgAlbum, icon1, icon2, NameAlbum, Artist, Description, icon3, icon4}) => {
+/* const InfoAlbum = ({ img_url, imgAlbum, icon1, icon2, NameAlbum, Artist, Description, icon3, icon4}) => { */
+    function InfoAlbum(props) {
+        
+
     return (
         <Fragment>
             <div className='InfoAlbum'>
-                <img className='InfoAlbum__img' src={imgAlbum} alt='Album Image' />
+                <img className='InfoAlbum__img' src={props.data.img_url} alt='Album Cover' />
                 <section className='InfoAlbum__Subtitle'>
-                    <p className='InfoAlbum__Subtitle--text'>// Album</p>
-                    <p className='InfoAlbum__Subtitle--NameAlbum'>{NameAlbum}</p>
-                    <p className='InfoAlbum__Subtitle--Artist'>{Artist}</p>
-                    <p className='InfoAlbum__Subtitle--Description'>{Description}</p>
+                    <p className='InfoAlbum__Subtitle--text'>Album</p>
+                    <p className='InfoAlbum__Subtitle--NameAlbum'>{props.data.name}</p>
+                    <p className='InfoAlbum__Subtitle--Artist'>{props.data.dificult}</p>
+                    <p className='InfoAlbum__Subtitle--Description'>{props.data.dificult}</p>
                     <ListAlbum number='1' song='Illusions' reproductions='42,822' time='3:21' />
                     <ListAlbum number='2' song='Conspiracy Generation' reproductions='67,420' time='3:30' />
                     <ListAlbum number='3' song='Conspiracy' reproductions='67,420' time='2:10' />

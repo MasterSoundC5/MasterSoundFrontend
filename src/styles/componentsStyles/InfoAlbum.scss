@@ -7,7 +7,9 @@
   width: 98%;
   margin: 39px 0px 35px 30px;
   &__img {
-    height: 466px;
+    height: 467px;
+    width: 226px;
+    object-fit: cover;
   }
   &__Subtitle {
     display: flex;
