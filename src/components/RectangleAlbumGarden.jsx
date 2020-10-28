@@ -15,7 +15,7 @@ const RectangleAlbumGarden = ({ SectionName }) => {
             <section className='AlbumSection__Rectangle'>
                 {
                 albumLocalStorage.map((item) => (
-                    <RectangleAlbum data={item} key={item.id} {...item}/>
+                    <RectangleAlbum data={item} key={item.spt_album_id} {...item}/>
                     ))
                 }
                 

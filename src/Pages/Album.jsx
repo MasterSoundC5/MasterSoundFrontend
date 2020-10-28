@@ -10,13 +10,13 @@ const Album = () => {
     const {myId} = useParams();
 
     const albumLocalStorage = JSON.parse( localStorage.getItem("albums"))
-    const album = albumLocalStorage.find(item => item.id === parseInt(myId));
+    const album = albumLocalStorage.find(item => item.spt_album_id === parseInt(myId));
 
     return(
         <div className='Album__container'>
                 <Panel />
                 <section className='ContentSection__Album'>
-                    <InfoAlbum data={album} key={album.id} NameAlbum='Illisions' Artist='Ibrahim Maalouf' Description='The artists we represent are one of the most successful in Romania and also were a huge breakthrough in the international market, topping radio and sales around the world.' />
+                    <InfoAlbum data={album} key={album.spt_album_id} />
                    
                 </section>
                 

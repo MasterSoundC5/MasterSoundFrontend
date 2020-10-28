@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom';
 import '../styles/componentsStyles/RectangleAlbum.scss'
 
 const RectangleAlbum = (props) => {
-    const { id, img_url, category } = props;
+    const {  spt_album_id, cover_image_url, name  } = props;
     return(
-        <Link to={`/album/${id}`}>
+        <Link to={`/album/${spt_album_id}`}>
             <div className='RectangleCover'>
-                <img src={img_url} alt='cover' />
+                <img src={cover_image_url} alt='cover' />
                 <div className="AlbumDetails">
                     <div className='AlbumDetails__information'>
-                        <h3>{category}</h3>
-                        <p>{category}</p>
+                        <h3>{name}</h3>
+                        <p>{name}</p>
                     </div>
                 </div>
             </div>

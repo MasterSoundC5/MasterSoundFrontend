@@ -18,7 +18,6 @@ export function useFetchAlbum (url) {
   }, [])
 
 
-  // -----ESTA LINEA NUNCA SE DEBE DE COMENTAR -----
   return [album]
 }
 

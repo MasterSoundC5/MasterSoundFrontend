@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import ListAlbum from './ListAlbum';
-import useFetchmusic from '../hooks/useFetchmusic';
 import '../styles/componentsStyles/InfoAlbum.scss';
 
 function InfoAlbum(props) {
@@ -14,12 +13,12 @@ function InfoAlbum(props) {
     return (
         <Fragment>
             <div className='InfoAlbum'>
-                <img className='InfoAlbum__img' src={props.data.img_url} alt='Album Cover' />
+                <img className='InfoAlbum__img' src={props.data.cover_image_url} alt='Album Cover' />
                 <section className='InfoAlbum__Subtitle'>
                     <p className='InfoAlbum__Subtitle--text'>Album</p>
                     <p className='InfoAlbum__Subtitle--NameAlbum'>{props.data.name}</p>
-                    <p className='InfoAlbum__Subtitle--Artist'>{props.data.dificult}</p>
-                    <p className='InfoAlbum__Subtitle--Description'>{props.data.dificult}</p>
+                    <p className='InfoAlbum__Subtitle--Artist'>{props.data.name}</p>
+                    <p className='InfoAlbum__Subtitle--Description'>{props.data.name}</p>
                             {
                                 ingredients.map( (item) => (
                                     <ListAlbum data={item} key={item.id}/>

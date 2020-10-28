@@ -5,15 +5,15 @@ import '../styles/componentsStyles/SquareAlbum.scss'
 
 
 const SquareAlbum = (props) => {
-    const { id, img_url, category } = props;
+    const { spt_album_id, cover_image_url, name } = props;
     
     return (
       <div className='SquareAlbum__container'>
-        <Link to={`/album/${id}`}>
-          <img src={img_url} alt="Cover Album"/>
+        <Link to={`/album/${spt_album_id}`}>
+          <img src={cover_image_url} alt="Cover Album"/>
         </Link>
-          <p>{category}</p>
-          <span>{category}</span>
+          <p>{name}</p>
+          <span>{name}</span>
         </div>
   )
 }

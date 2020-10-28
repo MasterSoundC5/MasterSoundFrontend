@@ -1,10 +1,12 @@
 import React from 'react'
 
 import SquareAlbum from '../components/SquareAlbum'
+
 import '../styles/componentsStyles/SquareAlbumGarden.scss'
 
 
 const SquareAlbumGarden = ({ SectionName }) => {
+    
     const albumLocalStorage = JSON.parse( localStorage.getItem("albums"))
 
     return(
@@ -15,7 +17,7 @@ const SquareAlbumGarden = ({ SectionName }) => {
             <section className='AlbumSection__Square'>
                 {
                 albumLocalStorage.map((item) => (
-                    <SquareAlbum data={item} key={item.id} {...item}/>
+                    <SquareAlbum data={item} key={item.spt_album_id} {...item}/>
                     ))
                 }
                 
