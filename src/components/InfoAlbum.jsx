@@ -1,10 +1,15 @@
 import React, { Fragment } from 'react';
 import ListAlbum from './ListAlbum';
+import useFetchmusic from '../hooks/useFetchmusic';
 import '../styles/componentsStyles/InfoAlbum.scss';
 
-/* const InfoAlbum = ({ img_url, imgAlbum, icon1, icon2, NameAlbum, Artist, Description, icon3, icon4}) => { */
-    function InfoAlbum(props) {
-        
+function InfoAlbum(props) {
+        const songsLocalStorage = JSON.parse( localStorage.getItem("songs"))
+
+         // se obtienen solo las canciones del album en cuestion
+    const ingredients = songsLocalStorage.filter( (item) => {
+        return item.Recipe === props.data.id
+    })
 
     return (
         <Fragment>
@@ -15,12 +20,11 @@ import '../styles/componentsStyles/InfoAlbum.scss';
                     <p className='InfoAlbum__Subtitle--NameAlbum'>{props.data.name}</p>
                     <p className='InfoAlbum__Subtitle--Artist'>{props.data.dificult}</p>
                     <p className='InfoAlbum__Subtitle--Description'>{props.data.dificult}</p>
-                    <ListAlbum number='1' song='Illusions' reproductions='42,822' time='3:21' />
-                    <ListAlbum number='2' song='Conspiracy Generation' reproductions='67,420' time='3:30' />
-                    <ListAlbum number='3' song='Conspiracy' reproductions='67,420' time='2:10' />
-                    <ListAlbum number='4' song='Busy' reproductions='67' time='3:30' />
-                    <ListAlbum number='5' song='Conspiracy Generation' reproductions='67,420' time='1:30' />
-                    <ListAlbum number='200' song='Conspiracy Generation' reproductions='7,420' time='30:30' />
+                            {
+                                ingredients.map( (item) => (
+                                    <ListAlbum data={item} key={item.id}/>
+                                ))
+                            }
                 </section>
             </div>
         </Fragment>
