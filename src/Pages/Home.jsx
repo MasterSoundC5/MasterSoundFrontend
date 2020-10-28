@@ -9,6 +9,7 @@ import AlbumArtist from '../Assets/AlbumArtist.PNG';
 import PurpleButtonGarden from '../components/PurpleButtonGarden'
 import SquareAlbumGarden from '../components/SquareAlbumGarden'
 import RectangleAlbumGarden from '../components/RectangleAlbumGarden';
+import NowPlaying from '../components/NowPlaying';
 
 
 export default class Home extends Component {
@@ -20,6 +21,7 @@ export default class Home extends Component {
                         <CircleAlbumGarden SectionName='Section Name'/>
                         <SquareAlbumGarden SectionName='Tendencia'/>
                         <PurpleButtonGarden />
+                        <NowPlaying />
                         <RectangleAlbumGarden SectionName='Tendencia'/>
                         <InfoAlbum imgAlbum={AlbumArtist} NameAlbum='Illisions' Artist='Ibrahim Maalouf' Description='The artists we represent are one of the most successful in Romania and also were a huge breakthrough in the international market, topping radio and sales around the world.' />
                         <TopTracks />
