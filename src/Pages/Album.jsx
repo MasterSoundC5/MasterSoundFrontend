@@ -5,6 +5,7 @@ import { useFetchmusic } from '../hooks/useFetchmusic';
 import Panel from '../components/Panel'
 import InfoAlbum from '../components/InfoAlbum'
 
+
 import '../styles/PagesStyles/Album.scss'
 
 const Album = () => {
@@ -13,18 +14,18 @@ const Album = () => {
     const albumLocalStorage = JSON.parse( localStorage.getItem("albums"))
     const album = albumLocalStorage.find(item => item.spt_album_id === myId);
     
-           //FETCH songs(call to API)
+//---------------FETCH songs(call to API-songs)------------------------------------//
     const songs = useFetchmusic(myId)
+//---------------storing the songs in the local storage----------------------//
+    localStorage.setItem( "SongsList", JSON.stringify( songs ))
     
-    console.log(songs)
     return(
         <div className='Album__container'>
-                <Panel />
-                <section className='ContentSection__Album'>
-                    <InfoAlbum data={album} />
-                </section>
-                
-            </div>
+            <Panel />
+            <section className='ContentSection__Album'>
+                <InfoAlbum data={album} />
+            </section>   
+        </div>
     )
 }
 

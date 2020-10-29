@@ -8,11 +8,10 @@ import ButtonWhite from '../components/ButtonWhite';
 import { useFetchAlbum } from '../hooks/useFetchAlbum';
 
  const SignIn = () => {
-       //FETCH Albums (call toAPI)
+//-----------------FETCH Albums (call toAPI)------------------------------//
        const albumList = useFetchAlbum('https://mastersound-backend.azurewebsites.net/api/albums/new-releases')       
      
-       // __________________LOCAL STORAGE_____________________
-       // se guarda la llamada de los albums
+//-----------------storing the album in the local storage----------------------//
        localStorage.setItem( "albums", JSON.stringify( albumList ))
        
         return(
