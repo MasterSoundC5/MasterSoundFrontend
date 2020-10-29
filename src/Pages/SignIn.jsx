@@ -11,9 +11,9 @@ import { useFetchmusic } from '../hooks/useFetchmusic';
  const SignIn = () => {
        //FETCH Albums (call toAPI)
        const [albumList] = useFetchAlbum('https://mastersound-backend.azurewebsites.net/api/albums/new-releases')
-    console.log(albumList);
+       
        //FETCH songs(call to API)
-       const [music] = useFetchmusic('https://mastersound-backend.azurewebsites.net/api/albums/')
+       const [music] = useFetchmusic('https://mastersound-backend.azurewebsites.net/api/albums/6M4Nu5UgX097dxeF2lm9P8/songs')
        
      
        // __________________LOCAL STORAGE_____________________
@@ -36,7 +36,9 @@ import { useFetchmusic } from '../hooks/useFetchmusic';
                             <div className="slider round"></div>
                         </label>
                     </div> 
-                    <ButtonWhite text='Login' className='button' />
+                    <Link to='/home' className='linkHome'>
+                        <ButtonWhite text='Login' className='button' />
+                    </Link>
                     <section className='mainSignIn__form--link'>
                         <Link to='/'>Olvide mi contraseña</Link>
                         <Link to='/register'>Crear una cuenta</Link>
