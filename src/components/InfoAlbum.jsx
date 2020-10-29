@@ -9,7 +9,7 @@ function InfoAlbum(props) {
     const music = songsLocalStorage.filter( (item) => {
         return item.album === props.data.spt_album_id
     })
-console.log(music);
+    console.log(music);
     return (
         <Fragment>
             <div className='InfoAlbum'>

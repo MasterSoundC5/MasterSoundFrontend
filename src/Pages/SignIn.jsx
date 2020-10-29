@@ -28,7 +28,9 @@ import { useFetchAlbum } from '../hooks/useFetchAlbum';
                             <div className="slider round"></div>
                         </label>
                     </div> 
-                    <ButtonWhite text='Login' className='button' />
+                    <Link to='/home' className='linkHome'>
+                        <ButtonWhite text='Login' className='button' />
+                    </Link>
                     <section className='mainSignIn__form--link'>
                         <Link to='/'>Olvide mi contraseña</Link>
                         <Link to='/register'>Crear una cuenta</Link>

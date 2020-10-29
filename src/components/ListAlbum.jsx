@@ -9,7 +9,7 @@ const ListAlbum = (props) => {
     return (
         <Fragment>
             <section className='listAlbum'>
-                <p className='listAlbum__Number'>{props.data.cant}</p>
+                <p className='listAlbum__Number'>{props.data.cant}</p> 
                 <button className='listAlbum__Favourite'>
                     {<FavouriteIcon />}
                 </button>
