@@ -18,7 +18,7 @@ const ListAlbum = (props) => {
                 </button>
                 <button className='listAlbum__Song'>{props.data.name}</button>
                 <p className='listAlbum__Reproductions'>{props.data.name}</p>
-                <p className='listAlbum__Time'>{props.data.name}</p>
+                <p className='listAlbum__Time'>{props.data.duration}</p>
                 <button className='listAlbum__Download'>
                     {<DownloadItemsIcon />}
                 </button>

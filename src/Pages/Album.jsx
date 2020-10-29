@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import { useParams } from 'react-router-dom';
 import { useFetchmusic } from '../hooks/useFetchmusic';
 
@@ -21,7 +21,7 @@ const Album = () => {
         <div className='Album__container'>
                 <Panel />
                 <section className='ContentSection__Album'>
-                <InfoAlbum data={album} />
+                    <InfoAlbum data={album} />
                 </section>
                 
             </div>

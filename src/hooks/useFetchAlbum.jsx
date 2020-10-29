@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react';
 
 
 export function useFetchAlbum (url) {
-
-  // ------- PARA USAR EL CUSTOM HOOK Y CONSUMIR DE LA API
+  
   const [album, setAlbum] = useState([]);
 
 

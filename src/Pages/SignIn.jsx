@@ -6,7 +6,6 @@ import Input from '../components/Input';
 import ButtonWhite from '../components/ButtonWhite';
 
 import { useFetchAlbum } from '../hooks/useFetchAlbum';
-import { useFetchmusic } from '../hooks/useFetchmusic';
 
  const SignIn = () => {
        //FETCH Albums (call toAPI)
@@ -15,9 +14,6 @@ import { useFetchmusic } from '../hooks/useFetchmusic';
        // __________________LOCAL STORAGE_____________________
        // se guarda la llamada de los albums
        localStorage.setItem( "albums", JSON.stringify( albumList ))
-     
-       // se guarda la llamada de las canciones
-       //localStorage.setItem ( "songs", JSON.stringify ( music ))
        
         return(
             <main className='mainSignIn'>
