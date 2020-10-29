@@ -10,18 +10,14 @@ import { useFetchmusic } from '../hooks/useFetchmusic';
 
  const SignIn = () => {
        //FETCH Albums (call toAPI)
-       const [albumList] = useFetchAlbum('https://mastersound-backend.azurewebsites.net/api/albums/new-releases')
-    console.log(albumList);
-       //FETCH songs(call to API)
-       const [music] = useFetchmusic('https://mastersound-backend.azurewebsites.net/api/albums/')
-       
+       const albumList = useFetchAlbum('https://mastersound-backend.azurewebsites.net/api/albums/new-releases')       
      
        // __________________LOCAL STORAGE_____________________
        // se guarda la llamada de los albums
        localStorage.setItem( "albums", JSON.stringify( albumList ))
      
        // se guarda la llamada de las canciones
-       localStorage.setItem ( "songs", JSON.stringify ( music ))
+       //localStorage.setItem ( "songs", JSON.stringify ( music ))
        
         return(
             <main className='mainSignIn'>

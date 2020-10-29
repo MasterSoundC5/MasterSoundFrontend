@@ -6,8 +6,8 @@ function InfoAlbum(props) {
         const songsLocalStorage = JSON.parse( localStorage.getItem("songs"))
 
          // se obtienen solo las canciones del album en cuestion
-    const ingredients = songsLocalStorage.filter( (item) => {
-        return item.Recipe === props.data.id
+    const music = songsLocalStorage.filter( (item) => {
+        return item.album === props.data.spt_album_id
     })
 
     return (
@@ -20,8 +20,8 @@ function InfoAlbum(props) {
                     <p className='InfoAlbum__Subtitle--Artist'>{props.data.name}</p>
                     <p className='InfoAlbum__Subtitle--Description'>{props.data.name}</p>
                             {
-                                ingredients.map( (item) => (
-                                    <ListAlbum data={item} key={item.id}/>
+                                music.map( (item) => (
+                                    <ListAlbum data={item} key={item.spt_album_id}/>
                                 ))
                             }
                 </section>

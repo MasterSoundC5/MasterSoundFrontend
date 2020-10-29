@@ -18,6 +18,6 @@ export function useFetchAlbum (url) {
   }, [])
 
 
-  return [album]
+  return album
 }
 
