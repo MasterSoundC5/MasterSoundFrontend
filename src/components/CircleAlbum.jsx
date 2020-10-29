@@ -5,15 +5,15 @@ import '../styles/componentsStyles/CircleAlbum.scss'
 
 
 const CircleAlbum = (props) => {
-    const { spt_album_id, cover_image_url, name } = props;
+    const { spt_album_id, cover_image_url, album_name, artist_name } = props;
 
     return(
         <div className="CircleAlbum__container">
             <Link to={`/album/${spt_album_id}`}>
                 <img src={cover_image_url} alt='Cover'/>
             </Link>
-            <h6>{name}</h6>
-            <p>{name}</p>
+            <h6>{album_name}</h6>
+            <p>{artist_name}</p>
         </div>
     )
 }
