@@ -2,33 +2,22 @@
 @import "./Media.scss";
 
 * {
+  margin: 0;
+  padding: 0;
   border: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   scrollbar-width: none;
 }
-
-#app, body, html{
-  margin: 0;
-  height: 100%;
-  width: 100%;
-}
-/*
 body{
   background: $Color-Fondo center fixed;
   height: 100%;
 }
-*/
-body::-webkit-scrollbar{
-  display: none;
-}
-
 a,
 ul {
   text-decoration: none;
   list-style: none;
 }
-
 button, input{
   outline: none;
 }
