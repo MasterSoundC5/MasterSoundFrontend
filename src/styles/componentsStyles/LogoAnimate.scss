@@ -1,6 +1,7 @@
 @import '../App.scss';
 
 .animationContainer{
+    background: $Color-Fondo center fixed;
     display: flex;
     justify-content: center;
     align-items: center;
