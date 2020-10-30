@@ -16,8 +16,8 @@ const SquareAlbumGarden = ({ SectionName }) => {
             </section>
             <section className='AlbumSection__Square'>
                 {
-                albumLocalStorage.map((item) => (
-                    <SquareAlbum data={item} key={item.spt_album_id} {...item}/>
+                albumLocalStorage.map((data) => (
+                    <SquareAlbum data={data} key={data.spt_album_id} {...data}/>
                     ))
                 }
                 

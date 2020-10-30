@@ -14,8 +14,8 @@ const CircleAlbumGarden = ({ SectionName }) => {
             </section>
             <section className='AlbumSection'>
                 {
-                albumLocalStorage.map((item) => (
-                    <CircleAlbum data={item} key={item.id} {...item}/>
+                albumLocalStorage.map((data) => (
+                    <CircleAlbum data={data} key={data.id} {...data}/>
                 ))
               }
             </section>

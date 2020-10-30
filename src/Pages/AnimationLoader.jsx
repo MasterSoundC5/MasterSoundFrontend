@@ -8,7 +8,7 @@ const AnimationLoader = () => {
 
     setTimeout(() => {
         history.push("/signin");
-      }, 7000);
+      }, 6000);
     
     return(
         <LogoAnimado />
