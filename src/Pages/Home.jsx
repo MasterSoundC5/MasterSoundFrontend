@@ -1,13 +1,7 @@
-import React, { Fragment, useEffect }  from 'react';
+import React, { useEffect }  from 'react';
 
 import Panel from '../components/Panel';
-import Playbar from '../components/Playbar';
-
 import '../styles/PagesStyles/Home.scss';
-import '../styles/PagesStyles/MusicPlayer.scss';
-import '../styles/componentsStyles/Playbar.scss';
-import Image from '../Assets/RollingCover.jpeg';
-
 import CircleAlbumGarden from '../components/CirculeAlbumGarden';
 import TopTracks from '../components/TopTracks';
 import PurpleButtonGarden from '../components/PurpleButtonGarden'
@@ -21,19 +15,17 @@ const Home = () => {
       }, []);
       
         return(
-            <Fragment>
-                <div className='music_player'>
+            <div className='Home__container'>
                     <Panel />
-                    <div className='content'>
+                    <section className='Content__section'>
                         <CircleAlbumGarden SectionName='Section Name'/>
                         <SquareAlbumGarden SectionName='Tendencia'/>
                         <PurpleButtonGarden />
                         <RectangleAlbumGarden SectionName='Tendencia'/>
                         <TopTracks />
-                    </div> 
-                    <Playbar name='Arabella' artist='Artic Monkeys' album='AM' image={Image} />                 
+                    </section>
+                    
                 </div>
-            </Fragment>
         )
 }
 export default Home;
