@@ -1,14 +1,13 @@
 @import '../App.scss';
 
 .CircleAlbum__garden{
-    width: 98%;
+    width: 100%;
     position: relative;
     padding-left: 30px;
 }
 .AlbumSection{
   height: 300px;
   display: flex;
-  margin-top: 30px;
   transition: 450ms -webkit-transform;
   transition: 450ms transform;
   transition: 450ms transform, 450ms -webkit-transform;
@@ -29,6 +28,8 @@
 .NameSection{
     height: 30px;
     padding-bottom: 20px;
-    position: absolute;
+}
+.NameSection h3{
+  margin-bottom: 0;
 }
 

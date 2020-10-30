@@ -27,6 +27,7 @@ const Home = () => {
                     <div className='content'>
                         <CircleAlbumGarden SectionName='Section Name'/>
                         <SquareAlbumGarden SectionName='Tendencia'/>
+                        <PurpleButtonGarden />
                         <RectangleAlbumGarden SectionName='Tendencia'/>
                         <TopTracks />
                     </div> 
