@@ -4,7 +4,7 @@ import logoAnimation from '../Assets/logoAnimation.svg'
 import '../styles/componentsStyles/LogoAnimate.scss'
 
 
-const LogoAnimado = () => {
+const LogoAnimate = () => {
     return(
         <div className='animationContainer'>
             <img src={logoAnimation} alt='Logo' />
@@ -12,4 +12,4 @@ const LogoAnimado = () => {
     )
 }
 
-export default LogoAnimado;
+export default LogoAnimate;

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from "react-router-dom";
 
-import LogoAnimado from '../components/LogoAnimado'
+import LogoAnimate from '../components/LogoAnimate'
 
 const AnimationLoader = () => {
     const history = useHistory();
@@ -11,7 +11,7 @@ const AnimationLoader = () => {
       }, 6000);
     
     return(
-        <LogoAnimado />
+        <LogoAnimate />
         )
     }
 
