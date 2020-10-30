@@ -9,7 +9,7 @@ const ListAlbum = (props) => {
     return (
         <Fragment>
             <section className='listAlbum'>
-                <p className='listAlbum__Number'>1</p> 
+    <p className='listAlbum__Number'>{props.data.order_number}</p> 
                 <button className='listAlbum__Favourite'>
                     {<FavouriteIcon />}
                 </button>
@@ -17,7 +17,7 @@ const ListAlbum = (props) => {
                     {<PlusIcon />}
                 </button>
                 <button className='listAlbum__Song'>{props.data.name}</button>
-                <p className='listAlbum__Reproductions'>10</p>
+                <p className='listAlbum__Reproductions'>{props.data.played_song_number}</p>
                 <p className='listAlbum__Time'>{props.data.duration}</p>
                 <button className='listAlbum__Download'>
                     {<DownloadItemsIcon />}

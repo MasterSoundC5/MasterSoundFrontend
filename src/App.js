@@ -5,6 +5,7 @@ import SignIn from './Pages/SignIn';
 import Register from './Pages/Register';
 import AnimationLoader from './Pages/AnimationLoader';
 import Album from './Pages/Album';
+import NotFound from './Pages/NotFound';
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
             exact 
             path='/register' 
             component={Register} 
+          />
+          <Route 
+            component={NotFound} 
           />
         </Switch>
     </BrowserRouter>
