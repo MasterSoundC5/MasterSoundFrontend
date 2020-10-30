@@ -1,19 +1,19 @@
 @import '../App.scss';
 
 .panel {
-    display: flex;
-    flex-direction: column;
     font-family: $Source-Pro;
     font-weight: $weight3;
-    line-height: 16px;
-    color: white;
-    background: $Color-Panel;
-    height: 100vh;
-    width: 170px;
+    width: 200px;
+    height: calc(100% - 70px);
+    background: #031D25;
+    padding: 20px;
+    position: fixed;
+    overflow: auto;
     &__logo{
         width: 127px;
         height: 98px;
-        margin: 0px 21px -20px;
+        padding: 5px;
+        margin: 12px;
     }
     &__p{
         font-size: 12px;
@@ -33,4 +33,8 @@
             margin: 23px 24px 15px;
         }
     }
+}
+
+.panel::-webkit-scrollbar {
+    display: none;
 }
