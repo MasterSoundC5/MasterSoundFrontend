@@ -9,6 +9,7 @@ import SquareAlbumGarden from '../components/SquareAlbumGarden'
 import RectangleAlbumGarden from '../components/RectangleAlbumGarden';
 
 import { useFetchAlbum } from '../hooks/useFetchAlbum';
+import Playbar from '../components/Playbar';
 
 const Home = () => {
     //-----------------FETCH Albums (call toAPI)------------------------------//
@@ -31,7 +32,7 @@ const Home = () => {
                         <RectangleAlbumGarden SectionName='Tendencia'/>
                         <TopTracks />
                     </section>
-                    
+                    <Playbar />                    
                 </div>
         )
 }
