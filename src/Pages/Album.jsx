@@ -4,6 +4,7 @@ import { useFetchmusic } from '../hooks/useFetchmusic';
 
 import Panel from '../components/Panel'
 import InfoAlbum from '../components/InfoAlbum'
+import Player from '../components/Player'
 
 
 import '../styles/PagesStyles/Album.scss'
@@ -21,6 +22,7 @@ const Album = () => {
     
     return(
         <div className='Album__container'>
+            <Player data={album} />
             <Panel />
             <section className='ContentSection__Album'>
                 <InfoAlbum data={album} />
