@@ -1,28 +1,107 @@
-import React, { Component }  from 'react';
+import React, { useState }  from 'react';
+import { Redirect } from 'react-router-dom';
 import Input from '../components/Input';
 import '../styles/PagesStyles/Register.scss';
 import Logo from '../Assets/Icons/logo.svg';
 import ButtonWhite from '../components/ButtonWhite';
 
-export default class Register extends Component {
+export default function Register () {
+    const [given_name, setGiven_name] = useState('');
+    const [last_name, setLast_name] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [country_id, setCountry_id] = useState('');
+    const [birth_date, setBirth_date] = useState('');
+    const [sex, setSex] = useState('');
 
-    render() {
-        return(
-            <main className='mainRegister'>
-                <img src={Logo} alt='Logo' />
-                <form className='mainSignIn__form'>
-                    <label>Nombre de Usuario</label>
-                    <Input type='text' placeholder='Nombre de Usuario' name='username' />
-                    <label>e-mail</label>
-                    <Input type='email' placeholder='e-mail' name='e-mail' />
-                    <label>Password</label>
-                    <Input type='password' placeholder='password' name='password' />
-                    <label>Confirmar Password</label>
-                    <Input type='password' placeholder='password' name='password' />
-                    <ButtonWhite text='Crear Cuenta' className='button' />
-                </form>
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        fetch('https://mastersound-backend.azurewebsites.net/api/auth/signup', {
+            method: 'post',
+            mode: 'cors', 
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                given_name,
+                last_name,
+                email, 
+                password,
+                country_id,
+                birth_date,
+                sex
+            })
+        }).then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => {
+            if(response) {
+                console.log('Success:', response);
+                return <Redirect to='/home' />;
+            }
+        } 
+    )};
 
-            </main>
-        )
-    }
+    
+    return(
+        <main className='mainRegister'>
+            <img src={Logo} alt='Logo' />
+            <form onSubmit={handleSubmit} className='mainSignIn__form'>
+                <label>Nombre de Usuario</label>
+                <Input
+                    type='text' 
+                    placeholder='Nombre' 
+                    name='given_name'
+                    onChange={(e) => setGiven_name(e.target.value)}
+                    value={given_name} 
+                />
+                <label>Apellido del Usuario</label>
+                <Input
+                    type='text' 
+                    placeholder='Apellido' 
+                    name='last_name'
+                    onChange={(e) => setLast_name(e.target.value)}
+                    value={last_name} 
+                />
+                <label>e-mail</label>
+                <Input
+                    type='email' 
+                    placeholder='e-mail' 
+                    name='email'
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email} 
+                />
+                <label>Password</label>
+                <Input
+                    type='password' 
+                    placeholder='Password' 
+                    name='password' 
+                    onChange={(e) => setPassword(e.target.value)}
+                    value={password} 
+                />      
+                <label>Pais de Origen</label>
+                <select className='select' value={country_id} onChange={(e) => setCountry_id(e.target.value)}>
+                    <option>Seleccionar País</option>
+                    <option value='137'>Mexico</option>
+                    <option value='47'>Colombia</option>
+                    <option value='55'>Cuba</option>
+                </select>   
+                <label>Fecha de nacimiento</label>
+                <Input
+                    type='date' 
+                    placeholder='birth_date' 
+                    name='birth_date' 
+                    onChange={(e) => setBirth_date(e.target.value)}
+                    value={birth_date} 
+                />   
+                <label>Sexo</label>
+                <select className='select' value={sex} onChange={(e) => setSex(e.target.value)}>
+                    <option>Seleccionar Genero</option>
+                    <option value='M'>Hombre</option>
+                    <option value='F'>Mujer</option>
+                </select>  
+                <ButtonWhite text='Crear Cuenta' />
+            </form>
+        </main>
+    )
 }

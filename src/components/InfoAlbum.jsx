@@ -10,7 +10,7 @@ const size = {
     height: 300,
   };
   const view = 'list'; // or 'coverart'
-  const theme = 'white'; // or 'white'
+  const theme = 'black'; // or 'white'
 
 
 function InfoAlbum({ data }) {
