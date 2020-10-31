@@ -7,6 +7,8 @@ import AnimationLoader from './Pages/AnimationLoader';
 import Album from './Pages/Album';
 import AlbumLibrary from './Pages/AlbumLibrary'
 import NotFound from './Pages/NotFound';
+import ArtistSection from './Pages/ArtistSection'
+
 
 function App() {
   return (
@@ -26,6 +28,11 @@ function App() {
             exact 
             path='/album/:myId' 
             component={Album} 
+          />
+          <Route 
+            exact 
+            path='/artist-section' 
+            component={ArtistSection} 
           />
           <Route 
             exact 

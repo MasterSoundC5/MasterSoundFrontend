@@ -8,9 +8,8 @@ const AlbumLibrary = () => {
     const albumLocalStorage = JSON.parse( localStorage.getItem("albums"))
 
     return (
-        <div>
-            <div className="AlbumLibrary__container">
-                <Panel />
+        <div className="AlbumLibrary__container">
+            <Panel />
                 <section className="AlbumLibrary__section">
                     {
                         albumLocalStorage.map((data) => (
@@ -18,9 +17,10 @@ const AlbumLibrary = () => {
                         ))
                     } 
                 </section>
-            </div>
         </div>
-    );
-}
- 
+        );
+    }
+     
 export default AlbumLibrary;
+        
+       
