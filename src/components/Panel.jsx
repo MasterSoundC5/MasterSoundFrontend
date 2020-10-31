@@ -23,7 +23,9 @@ export default class Panel extends Component {
                 <Link to="/album-library">
                     <SideLinks icon={<AlbumsIcon />} text='Albums' />
                 </Link>
-                <SideLinks icon={<ArtistsIcon />} text='Artists' />
+                <Link to="/artist-section">
+                    <SideLinks icon={<ArtistsIcon />} text='Artists' />
+                </Link>
                 <SideLinks icon={<YoutubeIcon />} text='YouTube' />
                 
                 <p className='panel__p'>My Tracks</p>
