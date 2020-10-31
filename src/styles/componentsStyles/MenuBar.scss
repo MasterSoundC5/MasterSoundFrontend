@@ -1,7 +1,7 @@
 @import '../App.scss';
+$searchImg: url('../../Assets/Icons/Search.svg');
 
-
-.nav-container{
+.nav-container {
 	width: 100%;
 	padding: 20px;
 	display: flex;
@@ -17,11 +17,13 @@ input {
   width: 40%;
   height: 67px;
   background: none;
+  background: $searchImg no-repeat 0 50%;
   border-right: 2px solid #d0cdcd1b;
   color: #f2ebef7e;
+
 }
 input[type=text] {
-  padding-left: 40px;  
+  padding-left: 40px;
 }
 
 .nav-wrapper-flex i {
