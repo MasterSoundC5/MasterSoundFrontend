@@ -1,6 +1,7 @@
 import React from 'react'
 import Panel from '../components/Panel'
 import ArtistImage from '../components/ArtistImage'
+import Playbar from '../components/Playbar';
 
 import '../styles/PagesStyles/ArtistSection.scss'
 
@@ -18,6 +19,7 @@ const ArtistSection = () => {
                         ))
                     } 
                 </section>
+                <Playbar />
         </div>
     )
 }

@@ -10,11 +10,6 @@ const PurpleButtonGarden = () => {
                 <div className='FilterArtist'>
                     <h3>Filter Artist</h3>
                 </div>
-                <div className='data__section'>
-                    <p>Week</p>
-                    <p>Month</p>
-                    <p>Year</p>
-                </div>
             </div>
             <div className='Genre__section'>
                 <ButtonPurple text='Jazz' className='button-purple'/>

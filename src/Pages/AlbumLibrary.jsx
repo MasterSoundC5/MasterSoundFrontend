@@ -2,6 +2,8 @@ import React from 'react';
 
 import Panel from '../components/Panel'
 import BigSquareAlbum from '../components/BigSquareAlbum'
+import Playbar from '../components/Playbar';
+
 import '../styles/PagesStyles/AlbumLibrary.scss'
 
 const AlbumLibrary = () => {
@@ -17,6 +19,7 @@ const AlbumLibrary = () => {
                         ))
                     } 
                 </section>
+                <Playbar />
         </div>
         );
     }

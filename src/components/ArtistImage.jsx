@@ -14,9 +14,11 @@ const ArtistImage = ({ data }) => {
     return(
         <Link to={`/album/${data.spt_album_id}`}>
             <div className='ImageArtist__container'>
-                <img src={ArtistPortrait} alt="Cover Album"/>
-                    <div className='ImageArtist__information'>
-                        <p>{nameArtists}</p>
+                <div className='ImageArtist__element'>
+                    <img src={ArtistPortrait} alt="Cover Album"/>
+                        <div className='ImageArtist__information'>
+                            <p>{nameArtists}</p>
+                        </div>
                     </div>
                 </div>
          </Link>
