@@ -7,6 +7,7 @@ import TopTracks from '../components/TopTracks';
 import PurpleButtonGarden from '../components/PurpleButtonGarden'
 import SquareAlbumGarden from '../components/SquareAlbumGarden'
 import RectangleAlbumGarden from '../components/RectangleAlbumGarden';
+import NowPlaying from '../components/NowPlaying';
 
 import { useFetchAlbum } from '../hooks/useFetchAlbum';
 import Playbar from '../components/Playbar';
@@ -31,6 +32,7 @@ const Home = () => {
                         <CircleAlbumGarden SectionName='Section Name'/>
                         <SquareAlbumGarden SectionName='Tendencia'/>
                         <PurpleButtonGarden />
+                        <NowPlaying />
                         <RectangleAlbumGarden SectionName='Tendencia'/>
                         <TopTracks />
                     </section>
