@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import '../styles/componentsStyles/SquareAlbum.scss'
 
 const SquareAlbum = ({data}) => {
-  //const { spt_album_id, cover_image_url, name } = props;
   const nameArtists = data.artists.map((data) => {
     return data.artist_name;
 })

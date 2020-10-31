@@ -5,10 +5,10 @@ import '../styles/componentsStyles/SideLinks.scss';
 const SideLinks = ({icon, text}) => {
     return (
         <Fragment>
-        <Link to='/' className='SideLinks'>
-             {icon}
-            <p>{text}</p>
-        </Link>
+            <div className='SideLinks'>
+                {icon}
+                <p>{text}</p>
+            </div>
         </Fragment>
     );
 }

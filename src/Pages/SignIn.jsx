@@ -5,14 +5,7 @@ import Logo from '../Assets/Icons/logo.svg';
 import Input from '../components/Input';
 import ButtonWhite from '../components/ButtonWhite';
 
-import { useFetchAlbum } from '../hooks/useFetchAlbum';
-
  const SignIn = () => {
-//-----------------FETCH Albums (call toAPI)------------------------------//
-       const albumList = useFetchAlbum('https://mastersound-backend.azurewebsites.net/api/albums/new-releases')       
-     
-//-----------------storing the album in the local storage----------------------//
-       localStorage.setItem( "albums", JSON.stringify( albumList ))
        
         return(
             <main className='mainSignIn'>
