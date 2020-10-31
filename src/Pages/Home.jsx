@@ -10,6 +10,7 @@ import RectangleAlbumGarden from '../components/RectangleAlbumGarden';
 
 import { useFetchAlbum } from '../hooks/useFetchAlbum';
 import Playbar from '../components/Playbar';
+import MenuBar from '../components/MenuBar';
 
 const Home = () => {
     //-----------------FETCH Albums (call toAPI)------------------------------//
@@ -26,6 +27,7 @@ const Home = () => {
             <div className='Home__container'>
                     <Panel />
                     <section className='Content__section'>
+                        <MenuBar />
                         <CircleAlbumGarden SectionName='Section Name'/>
                         <SquareAlbumGarden SectionName='Tendencia'/>
                         <PurpleButtonGarden />
