@@ -1,9 +1,5 @@
 @import '../App.scss';
 
-body{
-    background: $Color-Fondo center fixed;
-    height: 100%;
-}
 .mainSignIn {
     display: flex;
     flex-direction: column;
@@ -16,6 +12,9 @@ body{
     img {
         width: 224px;
         margin-bottom: 40px;
+    }
+    .linkHome {
+        margin: auto;
     }
     &__form {
         display: flex;

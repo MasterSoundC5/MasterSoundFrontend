@@ -1,23 +1,48 @@
 import React, { Fragment } from 'react';
 import ListAlbum from './ListAlbum';
+//import MySpotifyPlayer from './MySpotifyPlayer';
 import '../styles/componentsStyles/InfoAlbum.scss';
 
-const InfoAlbum = ({imgAlbum, icon1, icon2, NameAlbum, Artist, Description, icon3, icon4}) => {
+
+// size may also be a plain string using the presets 'large' or 'compact'
+/* const size = {
+    width: '100%',
+    height: 300,
+  };
+  const view = 'list'; // or 'coverart'
+  const theme = 'black'; // or 'white' */
+
+
+function InfoAlbum({ data }) {
+    
+    const nameArtists = data.artists.map((data) => {
+        return data.artist_name;
+    })
+//----------------------getting songs from local storage-----------------------//
+    const musicLocalstorage = JSON.parse( localStorage.getItem("SongsList"))
+    //const idAlbum = data.spt_album_id;
+    
     return (
         <Fragment>
             <div className='InfoAlbum'>
-                <img className='InfoAlbum__img' src={imgAlbum} alt='Album Image' />
+                <img className='InfoAlbum__img' src={data.cover_image_url} alt='Album Cover' />
                 <section className='InfoAlbum__Subtitle'>
-                    <p className='InfoAlbum__Subtitle--text'>// Album</p>
-                    <p className='InfoAlbum__Subtitle--NameAlbum'>{NameAlbum}</p>
-                    <p className='InfoAlbum__Subtitle--Artist'>{Artist}</p>
-                    <p className='InfoAlbum__Subtitle--Description'>{Description}</p>
-                    <ListAlbum number='1' song='Illusions' reproductions='42,822' time='3:21' />
-                    <ListAlbum number='2' song='Conspiracy Generation' reproductions='67,420' time='3:30' />
-                    <ListAlbum number='3' song='Conspiracy' reproductions='67,420' time='2:10' />
-                    <ListAlbum number='4' song='Busy' reproductions='67' time='3:30' />
-                    <ListAlbum number='5' song='Conspiracy Generation' reproductions='67,420' time='1:30' />
-                    <ListAlbum number='200' song='Conspiracy Generation' reproductions='7,420' time='30:30' />
+                    <p className='InfoAlbum__Subtitle--text'>Album</p>
+                    <p className='InfoAlbum__Subtitle--NameAlbum'>{data.album_name}</p>
+                    <p className='InfoAlbum__Subtitle--Artist'>{nameArtists}</p>
+                    <p className='InfoAlbum__Subtitle--Description'>{data.name}</p>
+                    
+                    {/* <MySpotifyPlayer 
+                        uri= {`spotify:album:${idAlbum}`}
+                        size={size}
+                        view={view}
+                        theme={theme} 
+                    /> */}
+                        {
+                            musicLocalstorage.map( (item) => (
+                                <ListAlbum data={item} {...item}/>
+                            ))
+                        }
                 </section>
             </div>
         </Fragment>

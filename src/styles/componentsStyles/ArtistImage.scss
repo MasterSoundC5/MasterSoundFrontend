@@ -1,0 +1,30 @@
+@import "../App.scss";
+
+.ImageArtist__container{
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.ImageArtist__container:hover {
+    opacity: 1;
+    filter: drop-shadow(5px 5px 5px rgba(247, 37, 133, 0.25));
+  }
+.ImageArtist__container img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.ImageArtist__information {
+    color: #F2EBEF;
+    margin: 5px 0px 20px 15px;
+    cursor: pointer;
+  }
+  .ImageArtist__information p{
+      font-size: 14px;
+      font-weight: lighter;
+  }
+  
