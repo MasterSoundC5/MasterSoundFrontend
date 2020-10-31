@@ -8,8 +8,13 @@ import PurpleButtonGarden from '../components/PurpleButtonGarden'
 import SquareAlbumGarden from '../components/SquareAlbumGarden'
 import RectangleAlbumGarden from '../components/RectangleAlbumGarden'
 
+<<<<<<< HEAD
+import { useFetchAlbum } from '../hooks/useFetchAlbum';
+import Playbar from '../components/Playbar';
+=======
 import { useFetchAlbum } from '../hooks/useFetchAlbum'
 import Playbar from '../components/Playbar'
+>>>>>>> bb91184eccbf0a1edbf68c04b9cad5daa61632f9
 
 const Home = () => {
     //-----------------FETCH Albums (call toAPI)------------------------------//
@@ -26,6 +31,7 @@ const Home = () => {
             <div className='Home__container'>
                     <Panel />
                     <section className='Content__section'>
+                        <MenuBar />
                         <CircleAlbumGarden SectionName='Section Name'/>
                         <SquareAlbumGarden SectionName='Tendencia'/>
                         <PurpleButtonGarden />
