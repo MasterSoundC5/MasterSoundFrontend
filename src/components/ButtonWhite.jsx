@@ -2,12 +2,11 @@ import React from 'react';
 import '../styles/componentsStyles/ButtonWhite.scss';
 
 
-const ButtonWhite = ({text, onClick, className}) => {
+const ButtonWhite = ({text}) => {
 
   return (
     <button 
-      className={className}
-      onClick={onClick}
+      className='button'
     >{text}</button>
   )
 }
