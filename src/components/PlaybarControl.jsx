@@ -2,15 +2,14 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/componentsStyles/SideLinks.scss';
 
-const SideLinks = ({icon, text}) => {
+const PlaybarControl = ({ path, icon, classname, event }) => {
     return (
         <Fragment>
-            <div className='SideLinks'>
+            <Link to={path} className={classname} onClick={event}>
                 {icon}
-                <p>{text}</p>
-            </div>
+            </Link>
         </Fragment>
     );
 }
  
-export default SideLinks;
+export default PlaybarControl;

@@ -20,8 +20,12 @@ export default class Panel extends Component {
                 <img className='panel__logo' src={Logo} alt='Logo' />
                 <SideLinks icon={<DiscoverIcon />} text='Discover' />
                 <SideLinks icon={<SongsIcon />} text='Songs' />
-                <SideLinks icon={<AlbumsIcon />} text='Albums' />
-                <SideLinks icon={<ArtistsIcon />} text='Artists' />
+                <Link to="/album-library">
+                    <SideLinks icon={<AlbumsIcon />} text='Albums' />
+                </Link>
+                <Link to="/artist-section">
+                    <SideLinks icon={<ArtistsIcon />} text='Artists' />
+                </Link>
                 <SideLinks icon={<YoutubeIcon />} text='YouTube' />
                 
                 <p className='panel__p'>My Tracks</p>
