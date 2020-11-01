@@ -8,8 +8,7 @@ import TopTracks from '../components/TopTracks'
 import PurpleButtonGarden from '../components/PurpleButtonGarden'
 import SquareAlbumGarden from '../components/SquareAlbumGarden'
 import RectangleAlbumGarden from '../components/RectangleAlbumGarden'
-
-import Playbar from '../components/Playbar'
+//import Playbar from '../components/Playbar'
 import MenuBar from '../components/MenuBar'
 
 
@@ -35,7 +34,7 @@ const Home = () => {
                         <RectangleAlbumGarden SectionName='Tendencia'/>
                         <TopTracks />
                     </section>
-                    <Playbar />                    
+                    {/* <Player data={album} />  */}                   
                 </div>
         )
 }
