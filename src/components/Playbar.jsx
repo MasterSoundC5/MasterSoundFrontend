@@ -171,7 +171,6 @@ class Playbar extends React.Component {
                     audioPlayer.src  = trackList[currentTrack].src;
                     audioPlayer.load();
                     audioPlayer.play();
-
                 }
                 const play = () =>{
                     audioPlayer.play();
