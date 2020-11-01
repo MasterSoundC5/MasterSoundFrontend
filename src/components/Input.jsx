@@ -1,13 +1,12 @@
 import React, { Fragment } from 'react';
 import '../styles/componentsStyles/Input.scss';
 
-const Input = ({InputName, type, placeholder, name}) => {
+const Input = ({type, placeholder, name, onChange, value}) => {
     return (
         <Fragment>
-            <h4>{InputName}</h4>
-            <input type={type} placeholder={placeholder} name={name} className='input' />
+            <input type={type} placeholder={placeholder} name={name} onChange={onChange} value={value} className='input' />
         </Fragment>
     );
 }
- 
+
 export default Input;
