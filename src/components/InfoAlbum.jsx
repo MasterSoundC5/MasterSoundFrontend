@@ -10,7 +10,7 @@ function InfoAlbum({ data }) {
     })
 //----------------------getting songs from local storage-----------------------//
     const musicLocalstorage = JSON.parse( localStorage.getItem("SongsList"))
-    
+    console.log(musicLocalstorage);
     return (
         <Fragment>
             <div className='InfoAlbum'>
