@@ -8,10 +8,8 @@ import TopTracks from '../components/TopTracks'
 import PurpleButtonGarden from '../components/PurpleButtonGarden'
 import SquareAlbumGarden from '../components/SquareAlbumGarden'
 import RectangleAlbumGarden from '../components/RectangleAlbumGarden'
-import Player from '../components/Player'
-
-
-//import MenuBar from '../components/MenuBar';
+//import Playbar from '../components/Playbar'
+import MenuBar from '../components/MenuBar'
 
 
 const Home = () => {
@@ -29,7 +27,7 @@ const Home = () => {
             <div className='Home__container'>
                     <Panel />
                     <section className='Content__section'>
-                       {/*  <MenuBar /> */}
+                        <MenuBar />
                         <CircleAlbumGarden SectionName='Section Name'/>
                         <SquareAlbumGarden SectionName='Tendencia'/>
                         <PurpleButtonGarden />

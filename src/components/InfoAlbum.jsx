@@ -4,13 +4,12 @@ import '../styles/componentsStyles/InfoAlbum.scss';
 
 
 function InfoAlbum({ data }) {
-    
+
     const nameArtists = data.artists.map((data) => {
         return data.artist_name;
     })
 //----------------------getting songs from local storage-----------------------//
     const musicLocalstorage = JSON.parse( localStorage.getItem("SongsList"))
-    console.log(musicLocalstorage);
     return (
         <Fragment>
             <div className='InfoAlbum'>
