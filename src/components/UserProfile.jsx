@@ -1,5 +1,5 @@
 import React from 'react'
-import UserImage from '../Assets/RollingCover.jpeg'
+import UserImage from '../Assets/ProfileDefaultImage.png'
 import '../styles/componentsStyles/UserProfile.scss'
 
 
