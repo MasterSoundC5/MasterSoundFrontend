@@ -2,12 +2,15 @@
 $searchImg: url('../../Assets/Icons/Search.svg');
 
 .nav-wrapper-flex {
-	width: 100%;
+	position: fixed;
+	z-index: 1;
+	width: 90%;
 	height: 67px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	color: #f2ebef7e;
+	background-color: #450220;
 }
 
 .nav-profile {
@@ -21,7 +24,7 @@ input {
   background: none;
   background: $searchImg no-repeat 0 50%;
   color: #f2ebef7e;
-	opacity: 0.6;
+	
 }
 
 input[type=text] {
