@@ -3,6 +3,8 @@ import Bell from '../components/Icons/Bell'
 import Radio from '../components/Icons/Radio'
 import Tv from '../components/Icons/Tv'
 
+import SearchFilter from '../components/SearchFilter'
+
 
 import '../styles/componentsStyles/MenuBar.scss'
 import UserProfile from './UserProfile'
@@ -10,7 +12,7 @@ import UserProfile from './UserProfile'
 const MenuBar = () => {
   return (
 	<nav className="nav-wrapper-flex">
-		<input type="text" placeholder="Search your entertainment"></input>
+		<SearchFilter />
 		<ul className="nav-links">
 			<li className="Tv__nav"><a href="/"><Tv /></a></li>
 			<li><a href="/"><Radio /></a></li>
