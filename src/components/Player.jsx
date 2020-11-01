@@ -9,6 +9,7 @@ const Player = ({ data }) => {
     const nameArtists = data.artists.map((data) => {
         return data.artist_name;
     })
+    
 
     return(
         <section className='Player__container'>
