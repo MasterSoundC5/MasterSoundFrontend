@@ -9,51 +9,50 @@ import AlbumLibrary from './Pages/AlbumLibrary'
 import NotFound from './Pages/NotFound';
 import ArtistSection from './Pages/ArtistSection'
 
-
 function App() {
   return (
-    <BrowserRouter>
-        <Switch>
-          <Route 
-            exact 
-            path='/' 
-            component={AnimationLoader} 
-          />
-          <Route 
-            exact 
-            path='/home' 
-            component={Home} 
-          />
-          <Route 
-            exact 
-            path='/album/:myId' 
-            component={Album} 
-          />
-          <Route 
-            exact 
-            path='/artist-section' 
-            component={ArtistSection} 
-          />
-          <Route 
-            exact 
-            path='/album-library' 
-            component={AlbumLibrary} 
-          />
-          <Route 
-            exact 
-            path='/signin' 
-            component={SignIn} 
-          />
-          <Route 
-            exact 
-            path='/register' 
-            component={Register} 
-          />
-          <Route 
-            component={NotFound} 
-          />
-        </Switch>
-    </BrowserRouter>
+      <BrowserRouter>
+          <Switch>
+            <Route 
+              exact 
+              path='/' 
+              component={AnimationLoader} 
+            />
+            <Route 
+              exact 
+              path='/home' 
+              component={Home} 
+            />
+            <Route 
+              exact 
+              path='/album/:myId' 
+              component={Album} 
+            />
+            <Route 
+              exact 
+              path='/artist-section' 
+              component={ArtistSection} 
+            />
+            <Route 
+              exact 
+              path='/album-library' 
+              component={AlbumLibrary} 
+            />
+            <Route 
+              exact 
+              path='/signin' 
+              component={SignIn} 
+            />
+            <Route 
+              exact 
+              path='/register' 
+              component={Register} 
+            />
+            <Route 
+              component={NotFound} 
+            />
+          </Switch>
+      </BrowserRouter>
   );
 }
 

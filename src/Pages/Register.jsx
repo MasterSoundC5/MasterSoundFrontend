@@ -1,5 +1,5 @@
 import React, { useState }  from 'react';
-import { Redirect } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 import Input from '../components/Input';
 import '../styles/PagesStyles/Register.scss';
 import Logo from '../Assets/Icons/logo.svg';
@@ -13,6 +13,8 @@ export default function Register () {
     const [country_id, setCountry_id] = useState('');
     const [birth_date, setBirth_date] = useState('');
     const [sex, setSex] = useState('');
+
+    const history = useHistory();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -29,7 +31,7 @@ export default function Register () {
                 email, 
                 password,
                 country_id,
-                birth_date,
+                birth_date:'1995-05-05',
                 sex
             })
         }).then(res => res.json())
@@ -37,7 +39,7 @@ export default function Register () {
         .then(response => {
             if(response) {
                 console.log('Success:', response);
-                return <Redirect to='/home' />;
+                history.push('/signin');
             }
         } 
     )};
@@ -86,14 +88,6 @@ export default function Register () {
                     <option value='47'>Colombia</option>
                     <option value='55'>Cuba</option>
                 </select>   
-                <label>Fecha de nacimiento</label>
-                <Input
-                    type='date' 
-                    placeholder='birth_date' 
-                    name='birth_date' 
-                    onChange={(e) => setBirth_date(e.target.value)}
-                    value={birth_date} 
-                />   
                 <label>Sexo</label>
                 <select className='select' value={sex} onChange={(e) => setSex(e.target.value)}>
                     <option>Seleccionar Genero</option>
