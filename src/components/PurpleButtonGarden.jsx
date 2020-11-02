@@ -8,12 +8,7 @@ const PurpleButtonGarden = () => {
         <section className='ButtonGarden__container'>
             <div className='Text__section'>
                 <div className='FilterArtist'>
-                    <h3>Filter Artist</h3>
-                </div>
-                <div className='data__section'>
-                    <p>Week</p>
-                    <p>Month</p>
-                    <p>Year</p>
+                    <h3>Filtrar por:</h3>
                 </div>
             </div>
             <div className='Genre__section'>
@@ -23,10 +18,7 @@ const PurpleButtonGarden = () => {
                 <ButtonPurple text='Rock' className='button-purple'/>
                 <ButtonPurple text='Blues' className='button-purple'/>
                 <ButtonPurple text='Latin Jazz' className='button-purple'/>
-                <ButtonPurple text='Rap' className='button-purple'/>
-                <ButtonPurple text='Rap' className='button-purple'/>
                 <ButtonPurple text='Clasic Rock' className='button-purple'/>
-                <ButtonPurple text='Country' className='button-purple'/>
                 <ButtonPurple text='Country' className='button-purple'/>
             </div>
         </section>

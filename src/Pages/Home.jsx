@@ -1,17 +1,16 @@
-import React, { useEffect }  from 'react';
+import React, { useEffect }  from 'react'
+import { useFetchAlbum } from '../hooks/useFetchAlbum'
 
-import Panel from '../components/Panel';
-import '../styles/PagesStyles/Home.scss';
-import CircleAlbumGarden from '../components/CirculeAlbumGarden';
-import TopTracks from '../components/TopTracks';
+import Panel from '../components/Panel'
+import '../styles/PagesStyles/Home.scss'
+import CircleAlbumGarden from '../components/CirculeAlbumGarden'
+import TopTracks from '../components/TopTracks'
 import PurpleButtonGarden from '../components/PurpleButtonGarden'
 import SquareAlbumGarden from '../components/SquareAlbumGarden'
-import RectangleAlbumGarden from '../components/RectangleAlbumGarden';
-import NowPlaying from '../components/NowPlaying';
+import RectangleAlbumGarden from '../components/RectangleAlbumGarden'
+import Playbar from '../components/Playbar'
+import MenuBar from '../components/MenuBar'
 
-import { useFetchAlbum } from '../hooks/useFetchAlbum';
-import Playbar from '../components/Playbar';
-import MenuBar from '../components/MenuBar';
 
 const Home = () => {
     //-----------------FETCH Albums (call toAPI)------------------------------//
@@ -29,11 +28,10 @@ const Home = () => {
                     <Panel />
                     <section className='Content__section'>
                         <MenuBar />
-                        <CircleAlbumGarden SectionName='Section Name'/>
-                        <SquareAlbumGarden SectionName='Tendencia'/>
+                        <CircleAlbumGarden SectionName='Tendencias'/>
+                        <SquareAlbumGarden SectionName='Recomendaciones'/>
                         <PurpleButtonGarden />
-                        <NowPlaying />
-                        <RectangleAlbumGarden SectionName='Tendencia'/>
+                        <RectangleAlbumGarden SectionName='Escuchado recientemente'/>
                         <TopTracks />
                     </section>
                     <Playbar />                    

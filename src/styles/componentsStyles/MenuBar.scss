@@ -1,48 +1,41 @@
 @import '../App.scss';
 $searchImg: url('../../Assets/Icons/Search.svg');
 
-.nav-container {
-	width: 100%;
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.title{
-	margin-left: 20px;
-	cursor: pointer;
-}
-input {
-  width: 40%;
-  height: 67px;
-  background: none;
-  background: $searchImg no-repeat 0 50%;
-  border-right: 2px solid #d0cdcd1b;
-  color: #f2ebef7e;
-
-}
-input[type=text] {
-  padding-left: 40px;
-}
-
-.nav-wrapper-flex i {
-  stroke: #f2ebef7e;;
-}
-
 .nav-wrapper-flex {
-	width: 100%;
+	position: fixed;
+	z-index: 1;
+	width: 90%;
 	height: 67px;
 	display: flex;
-  justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	color: #f2ebef7e;
+	background-color: #450220;
 }
 
+.nav-profile {
+	margin: auto;
+}
+
+input {
+  width: 55%;
+  height: 67px;
+	margin: auto;
+  background: none;
+  background: $searchImg no-repeat 0 50%;
+  color: #f2ebef7e;
+	
+}
+
+input[type=text] {
+  padding-left: 35px;
+	font-size: 1rem;
+}
 
 .nav-links{
 	display: flex;
 	list-style-type: none;
+	align-items: center;
 	cursor: pointer;
 	@media screen and (max-width: 600px){
 		display: none;
@@ -50,12 +43,21 @@ input[type=text] {
   ul {
     align-items: center;
   }
+	li {
+		border-right: 2px solid #d0cdcd1b;
+		height: 67px;
+		padding-top: 5%;
+	}
+.Tv__nav {
+		border-left: 2px solid #d0cdcd1b;
+	}
 	li a{
 		position: relative;
 		margin: 0 50px 0 50px;
 		text-transform: uppercase;
-		font-size: 0.9rem;
+		font-size: 1rem;
 		text-decoration: none;
+		opacity: 0.6;
 		color: #f2ebef7e;
     stroke: #f2ebef7e;
     
@@ -66,6 +68,7 @@ input[type=text] {
         height: 2px;
         top: 110%;
         left: 0;
+				opacity: none;
         background: #f2ebef7e;
         transition: transform 0.5s;
         transform: scaleX(0);

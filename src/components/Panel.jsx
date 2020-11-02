@@ -18,7 +18,9 @@ export default class Panel extends Component {
         return(
             <div className='panel'>
                 <img className='panel__logo' src={Logo} alt='Logo' />
-                <SideLinks icon={<DiscoverIcon />} text='Discover' />
+                <Link to="/home">
+                    <SideLinks icon={<DiscoverIcon />} text='Discover' />
+                </Link>
                 <SideLinks icon={<SongsIcon />} text='Songs' />
                 <Link to="/album-library">
                     <SideLinks icon={<AlbumsIcon />} text='Albums' />
@@ -48,3 +50,4 @@ export default class Panel extends Component {
         )
     }
 }
+
