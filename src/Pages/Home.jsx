@@ -1,24 +1,43 @@
-import React, { Component }  from 'react';
+import React, { useEffect }  from 'react';
 
 import Panel from '../components/Panel';
 import '../styles/PagesStyles/Home.scss';
 import CircleAlbumGarden from '../components/CirculeAlbumGarden';
-import InfoAlbum from '../components/InfoAlbum';
-import AlbumArtist from '../Assets/AlbumArtist.PNG';
+import TopTracks from '../components/TopTracks';
 import PurpleButtonGarden from '../components/PurpleButtonGarden'
+import SquareAlbumGarden from '../components/SquareAlbumGarden'
+import RectangleAlbumGarden from '../components/RectangleAlbumGarden';
+import NowPlaying from '../components/NowPlaying';
 
+import { useFetchAlbum } from '../hooks/useFetchAlbum';
+import Playbar from '../components/Playbar';
+import MenuBar from '../components/MenuBar';
 
-export default class Home extends Component {
-    render() {
+const Home = () => {
+    //-----------------FETCH Albums (call toAPI)------------------------------//
+    const albumList = useFetchAlbum('https://mastersound-backend.azurewebsites.net/api/albums/new-releases')       
+     
+    //-----------------storing the album in the local storage----------------------//
+           localStorage.setItem( "albums", JSON.stringify( albumList ))
+
+    useEffect(() => {
+        window.scroll(0, 0)
+      }, []);
+      
         return(
-            <div className='home'>
-                <Panel />
-                <section>
-                    <CircleAlbumGarden SectionName='Section Name'/>
-                    <PurpleButtonGarden />
-                    <InfoAlbum imgAlbum={AlbumArtist} NameAlbum='Illisions' Artist='Ibrahim Maalouf' Description='The artists we represent are one of the most successful in Romania and also were a huge breakthrough in the international market, topping radio and sales around the world.' />
-                </section>
-            </div>
+            <div className='Home__container'>
+                    <Panel />
+                    <section className='Content__section'>
+                        <MenuBar />
+                        <CircleAlbumGarden SectionName='Section Name'/>
+                        <SquareAlbumGarden SectionName='Tendencia'/>
+                        <PurpleButtonGarden />
+                        <NowPlaying />
+                        <RectangleAlbumGarden SectionName='Tendencia'/>
+                        <TopTracks />
+                    </section>
+                    <Playbar />                    
+                </div>
         )
-    }
 }
+export default Home;
