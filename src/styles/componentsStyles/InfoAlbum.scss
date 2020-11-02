@@ -3,9 +3,11 @@
 .InfoAlbum {
   display: flex;
   background: transparent;
-  height: 467px;
+  height: 80%;
   width: 98%;
-  margin: 39px 0px 35px 30px;
+  margin: 80px 0px 35px 30px;
+  overflow: auto;
+
   &__img {
     height: 467px;
     width: 226px;
@@ -44,4 +46,8 @@
       opacity: 0.5;
     }
   }
+}
+
+.InfoAlbum::-webkit-scrollbar{
+  display: none;
 }
