@@ -11,7 +11,7 @@ export default function Register () {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [country_id, setCountry_id] = useState('');
-    const [birth_date, setBirth_date] = useState('');
+    const [image_url, setImage_url] = useState('');
     const [sex, setSex] = useState('');
 
     const history = useHistory();
@@ -31,7 +31,7 @@ export default function Register () {
                 email, 
                 password,
                 country_id,
-                birth_date:'1995-05-05',
+                image_url: 'https://i.scdn.co/image/23009960c33ef08d5973440cca17985a6c70a515',
                 sex
             })
         }).then(res => res.json())
@@ -87,7 +87,7 @@ export default function Register () {
                     <option value='137'>Mexico</option>
                     <option value='47'>Colombia</option>
                     <option value='55'>Cuba</option>
-                </select>   
+                </select>  
                 <label>Sexo</label>
                 <select className='select' value={sex} onChange={(e) => setSex(e.target.value)}>
                     <option>Seleccionar Genero</option>
