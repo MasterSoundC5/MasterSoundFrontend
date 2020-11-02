@@ -1,0 +1,82 @@
+@import '../App.scss';
+
+
+
+#slider {
+  width: 1000px;
+  overflow: hidden;
+}
+
+#container {
+  width: 4000px;
+  height:380px;
+  position:relative;
+  overflow: hidden;
+}
+
+button {
+  position: absolute;
+  top: 160px;
+  background: none;
+  border:none;
+  font-size: 30px;
+  color:#FFF;
+}
+button:hover {color:#081368}
+button#left {left: 10px;}
+button#right {left: 940px;}
+
+.item {
+  width:1000px;
+  float:left;
+  background:#CCC;
+  height:300px;
+  transition: all 1s;
+  text-align:center;
+  color: #FFFFFF;
+  padding-top:80px;
+  position:absolute;
+}
+
+.item h1 {font-size:60px;margin-bottom: 10px;}
+.item p {font-size:20px;font-weight:lighter;}
+
+.item#slide1 {
+  background: #5aecfc;
+	background:-webkit-linear-gradient(top, #5aecfc 0, #59fcdb);
+	background:-o-linear-gradient(bottom, #5aecfc 0, #59fcdb);
+	background:-moz-linear-gradient(bottom, #5aecfc 0, #59fcdb);
+	background:linear-gradient(to bottom, #5aecfc 0, #59fcdb);
+}
+
+.item#slide2 {
+  background: #8a4ff7;
+	background:-webkit-linear-gradient(top, #8a4ff7 0, #251fa3);
+	background:-o-linear-gradient(bottom, #8a4ff7 0, #251fa3);
+	background:-moz-linear-gradient(bottom, #8a4ff7 0, #251fa3);
+	background:linear-gradient(to bottom, #8a4ff7 0, #251fa3);
+}
+
+.item#slide3 {
+  background: #fcd858;
+	background:-webkit-linear-gradient(top, #fcd858 0, #fc9928);
+	background:-o-linear-gradient(bottom, #fcd858 0, #fc9928);
+	background:-moz-linear-gradient(bottom, #fcd858 0, #fc9928);
+	background:linear-gradient(to bottom, #fcd858 0, #fc9928);
+}
+
+.item#slide4 {
+  background: #fc4e28;
+	background:-webkit-linear-gradient(top, #fc2828 0, #fc2859);
+	background:-o-linear-gradient(bottom, #fc2828 0, #fc2859);
+	background:-moz-linear-gradient(bottom, #fc2828 0, #fc2859);
+	background:linear-gradient(to bottom, #fc2828 0, #fc2859);
+}
+
+$left: -1000px;
+$center: 0px;
+$right: 1000px;
+
+.level-1  {left: $left;}
+.level0 {left: $center;}
+.level1 {left: $right;}
