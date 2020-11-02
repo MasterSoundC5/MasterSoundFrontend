@@ -15,10 +15,9 @@ const ListAlbum = (props) => {
         dispatch(setPlaying(props.data.sound_url))
     }
 
-    
     return (
         <Fragment>
-            <section className='listAlbum'>
+            <section onClick={setPlayingSong} className='listAlbum'>
                 <p className='listAlbum__Number'>{props.data.order_number}</p> 
                 <div className='listAlbum__Favourite'>
                     {<FavouriteIcon />}
@@ -26,7 +25,7 @@ const ListAlbum = (props) => {
                 <button className='listAlbum__Plus'>
                     {<PlusIcon />}
                 </button>
-                <div onClick={setPlayingSong} className='listAlbum__Song'>{props.data.name}</div>
+                <div className='listAlbum__Song'>{props.data.name}</div>
                 <p className='listAlbum__Reproductions' >{props.data.played_song_number}</p>
                 <p className='listAlbum__Time'>{props.data.duration}</p>
                 <button className='listAlbum__Download'>

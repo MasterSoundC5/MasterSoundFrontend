@@ -4,8 +4,8 @@ import { useFetchmusic } from '../hooks/useFetchmusic'
 
 import Panel from '../components/Panel'
 import InfoAlbum from '../components/InfoAlbum'
-import Player from '../components/Player'
-
+import Playbar from '../components/Playbar'
+import MenuBar from '../components/MenuBar'
 import '../styles/PagesStyles/Album.scss'
 
 const Album = () => {
@@ -21,9 +21,10 @@ const Album = () => {
     
     return(
         <div className='Album__container'>
-            <Player data={album} />
+            <Playbar />
             <Panel />
             <section className='ContentSection__Album'>
+                <MenuBar />
                 <InfoAlbum data={album} />
             </section>   
         </div>

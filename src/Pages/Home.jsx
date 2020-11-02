@@ -8,7 +8,7 @@ import TopTracks from '../components/TopTracks'
 import PurpleButtonGarden from '../components/PurpleButtonGarden'
 import SquareAlbumGarden from '../components/SquareAlbumGarden'
 import RectangleAlbumGarden from '../components/RectangleAlbumGarden'
-//import Playbar from '../components/Playbar'
+import Playbar from '../components/Playbar'
 import MenuBar from '../components/MenuBar'
 
 
@@ -28,13 +28,13 @@ const Home = () => {
                     <Panel />
                     <section className='Content__section'>
                         <MenuBar />
-                        <CircleAlbumGarden SectionName='Section Name'/>
-                        <SquareAlbumGarden SectionName='Tendencia'/>
+                        <CircleAlbumGarden SectionName='Tendencias'/>
+                        <SquareAlbumGarden SectionName='Recomendaciones'/>
                         <PurpleButtonGarden />
-                        <RectangleAlbumGarden SectionName='Tendencia'/>
+                        <RectangleAlbumGarden SectionName='Escuchado recientemente'/>
                         <TopTracks />
                     </section>
-                    {/* <Player data={album} />  */}                   
+                    <Playbar />                    
                 </div>
         )
 }

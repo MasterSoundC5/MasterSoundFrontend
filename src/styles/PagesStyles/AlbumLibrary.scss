@@ -9,13 +9,15 @@
     font-weight: $weight3;
     color: white;
 }
-
 .AlbumLibrary__section{
     overflow: auto;
     height: 100vh;
     position: relative;
     margin: 0px;
     padding-bottom: 70px;
+}
+.AlbumSection__image{
+    margin-top: 70px;
 }
 .AlbumLibrary__section::-webkit-scrollbar{
     display: none;
