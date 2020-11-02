@@ -3,13 +3,13 @@ import Bell from '../components/Icons/Bell'
 import Radio from '../components/Icons/Radio'
 import Tv from '../components/Icons/Tv'
 
-import SearchFilter from '../components/SearchFilter'
-
-
 import '../styles/componentsStyles/MenuBar.scss'
+import SearchFilter from './SearchFilter'
 import UserProfile from './UserProfile'
 
 const MenuBar = () => {
+	
+
   return (
 	<nav className="nav-wrapper-flex">
 		<SearchFilter />
