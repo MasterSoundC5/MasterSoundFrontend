@@ -5,6 +5,9 @@ import '../styles/componentsStyles/RectangleAlbumGarden.scss'
 
 
 const RectangleAlbumGarden = ({ SectionName }) => {
+
+    // TODO:
+    // localStorage is great but is limited for handle the global state I recommend use React Context or Redux
     const albumLocalStorage = JSON.parse( localStorage.getItem("albums"))
 
     return(
@@ -18,7 +21,7 @@ const RectangleAlbumGarden = ({ SectionName }) => {
                     <RectangleAlbum data={data} key={data.spt_album_id} {...data}/>
                     ))
                 }
-                
+
             </section>
         </div>
     )

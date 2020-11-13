@@ -11,14 +11,16 @@ import '../styles/PagesStyles/Album.scss'
 const Album = () => {
     const {myId} = useParams();
 
+    // TODO:
+    // localStorage is great but is limited for handle the global state I recommend use React Context or Redux
     const albumLocalStorage = JSON.parse( localStorage.getItem("albums"))
     const album = albumLocalStorage.find(item => item.spt_album_id === myId);
-    
+
 //---------------FETCH songs(call to API-songs)------------------------------------//
     const songs = useFetchmusic(myId)
 //---------------storing the songs in the local storage----------------------//
     localStorage.setItem( "SongsList", JSON.stringify( songs ))
-    
+
     return(
         <div className='Album__container'>
             <Playbar />
@@ -26,7 +28,7 @@ const Album = () => {
             <section className='ContentSection__Album'>
                 <MenuBar />
                 <InfoAlbum data={album} />
-            </section>   
+            </section>
         </div>
     )
 }

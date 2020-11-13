@@ -18,19 +18,23 @@ export default function Register () {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
+        // TODO:
+        // The API URL should be a global variable
         fetch('https://mastersound-backend.azurewebsites.net/api/auth/signup', {
             method: 'post',
-            mode: 'cors', 
+            mode: 'cors',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
                 given_name,
                 last_name,
-                email, 
+                email,
                 password,
                 country_id,
+                // TODO:
+                // Why this image is set by default?
                 image_url: 'https://i.scdn.co/image/23009960c33ef08d5973440cca17985a6c70a515',
                 sex
             })
@@ -41,59 +45,59 @@ export default function Register () {
                 console.log('Success:', response);
                 history.push('/signin');
             }
-        } 
+        }
     )};
 
-    
+
     return(
         <main className='mainRegister'>
             <img src={Logo} alt='Logo' />
             <form onSubmit={handleSubmit} className='mainSignIn__form'>
                 <label>Nombre de Usuario</label>
                 <Input
-                    type='text' 
-                    placeholder='Nombre' 
+                    type='text'
+                    placeholder='Nombre'
                     name='given_name'
                     onChange={(e) => setGiven_name(e.target.value)}
-                    value={given_name} 
+                    value={given_name}
                 />
                 <label>Apellido del Usuario</label>
                 <Input
-                    type='text' 
-                    placeholder='Apellido' 
+                    type='text'
+                    placeholder='Apellido'
                     name='last_name'
                     onChange={(e) => setLast_name(e.target.value)}
-                    value={last_name} 
+                    value={last_name}
                 />
                 <label>e-mail</label>
                 <Input
-                    type='email' 
-                    placeholder='e-mail' 
+                    type='email'
+                    placeholder='e-mail'
                     name='email'
                     onChange={(e) => setEmail(e.target.value)}
-                    value={email} 
+                    value={email}
                 />
                 <label>Password</label>
                 <Input
-                    type='password' 
-                    placeholder='Password' 
-                    name='password' 
+                    type='password'
+                    placeholder='Password'
+                    name='password'
                     onChange={(e) => setPassword(e.target.value)}
-                    value={password} 
-                />      
+                    value={password}
+                />
                 <label>Pais de Origen</label>
                 <select className='select' value={country_id} onChange={(e) => setCountry_id(e.target.value)}>
                     <option>Seleccionar País</option>
                     <option value='137'>Mexico</option>
                     <option value='47'>Colombia</option>
                     <option value='55'>Cuba</option>
-                </select>  
+                </select>
                 <label>Sexo</label>
                 <select className='select' value={sex} onChange={(e) => setSex(e.target.value)}>
                     <option>Seleccionar Genero</option>
                     <option value='M'>Hombre</option>
                     <option value='F'>Mujer</option>
-                </select>  
+                </select>
                 <ButtonWhite text='Crear Cuenta' />
             </form>
         </main>

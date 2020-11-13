@@ -5,6 +5,8 @@ import '../styles/componentsStyles/CircleAlbumGarden.scss'
 
 
 const CircleAlbumGarden = ({ SectionName }) => {
+    // TODO:
+    // localStorage is great but is limited for handle the global state I recommend use React Context or Redux
     const albumLocalStorage = JSON.parse( localStorage.getItem("albums"))
 
     return(

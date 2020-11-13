@@ -14,15 +14,19 @@ import MenuBar from '../components/MenuBar'
 
 const Home = () => {
     //-----------------FETCH Albums (call toAPI)------------------------------//
-    const albumList = useFetchAlbum('https://mastersound-backend.azurewebsites.net/api/albums/new-releases')       
-     
+    // TODO:
+    // The API URL should be a global variable
+    const albumList = useFetchAlbum('https://mastersound-backend.azurewebsites.net/api/albums/new-releases')
+
     //-----------------storing the album in the local storage----------------------//
-           localStorage.setItem( "albums", JSON.stringify( albumList ))
+    // TODO:
+    // localStorage is great but is limited for handle the global state I recommend use React Context or Redux
+    localStorage.setItem( "albums", JSON.stringify( albumList ))
 
     useEffect(() => {
         window.scroll(0, 0)
       }, []);
-      
+
         return(
             <div className='Home__container'>
                     <Panel />
@@ -34,7 +38,7 @@ const Home = () => {
                         <RectangleAlbumGarden SectionName='Escuchado recientemente'/>
                         <TopTracks />
                     </section>
-                    <Playbar />                    
+                    <Playbar />
                 </div>
         )
 }

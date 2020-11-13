@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import '../styles/componentsStyles/BigSquareAlbum.scss'
 
 const BigSquareAlbum = ({ data }) => {
+    // TODO:
+    // nameArtists is a array but in the HTML show as string
     const nameArtists = data.artists.map((data) => {
         return data.artist_name;
     })
@@ -19,7 +21,7 @@ const BigSquareAlbum = ({ data }) => {
                 </div>
             </div>
          </Link>
-        
+
     )
 }
 

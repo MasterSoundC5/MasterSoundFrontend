@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom';
 import '../styles/componentsStyles/SquareAlbum.scss'
 
 const SquareAlbum = ({data}) => {
+
+  // TODO:
+  // nameArtists is a array but in the HTML show as string
   const nameArtists = data.artists.map((data) => {
     return data.artist_name;
 })
-  
+
   return (
     <div className='SquareAlbum__container'>
       <Link to={`/album/${data.spt_album_id}`}>

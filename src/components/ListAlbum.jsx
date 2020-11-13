@@ -4,7 +4,7 @@ import '../styles/componentsStyles/ListAlbum.scss';
 
 import {setPlaying} from '../actions/songActions'
 //********  Icons  **********//
-import { FavouriteIcon, DownloadItemsIcon, ShareIcon, PlusIcon } 
+import { FavouriteIcon, DownloadItemsIcon, ShareIcon, PlusIcon }
 from '../components/Icons';
 
 
@@ -17,8 +17,9 @@ const ListAlbum = (props) => {
 
     return (
         <Fragment>
+            {/* The Section with OnClick it's bad practice for accessibility */}
             <section onClick={setPlayingSong} className='listAlbum'>
-                <p className='listAlbum__Number'>{props.data.order_number}</p> 
+                <p className='listAlbum__Number'>{props.data.order_number}</p>
                 <div className='listAlbum__Favourite'>
                     {<FavouriteIcon />}
                 </div>
@@ -39,5 +40,5 @@ const ListAlbum = (props) => {
         </Fragment>
     );
 }
- 
+
 export default ListAlbum;
