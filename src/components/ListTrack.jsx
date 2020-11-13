@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import '../styles/componentsStyles/ListTrack.scss';
 
 //********  Icons  **********//
-import { FavouriteIcon, DownloadItemsIcon, ShareIcon } 
+import { FavouriteIcon, DownloadItemsIcon, ShareIcon }
 from './Icons';
 
 const ListTrack = ({number, song, artist, reproductions, time}) => {
@@ -10,6 +10,7 @@ const ListTrack = ({number, song, artist, reproductions, time}) => {
         <Fragment>
             <section className='listTrack'>
                 <p className='listTrack__Number'>{number}</p>
+                 {/* In these buttons there are no actions */}
                 <button className='listTrack__Favourite'>
                     {<FavouriteIcon />}
                 </button>
@@ -28,5 +29,5 @@ const ListTrack = ({number, song, artist, reproductions, time}) => {
         </Fragment>
     );
 }
- 
+
 export default ListTrack;

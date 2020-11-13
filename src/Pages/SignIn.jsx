@@ -9,8 +9,12 @@ import { useFetchAlbum } from '../hooks/useFetchAlbum';
 
 export default function SingIn() {
     //-----------------FETCH Albums (call toAPI)------------------------------//
-    const albumList = useFetchAlbum('https://mastersound-backend.azurewebsites.net/api/albums/new-releases')       
+    // TODO:
+    // The API URL should be a global variable
+    const albumList = useFetchAlbum('https://mastersound-backend.azurewebsites.net/api/albums/new-releases')
     //-----------------storing the album in the local storage----------------------//
+    // TODO:
+    // localStorage is great but is limited for handle the global state I recommend use React Context or Redux
     localStorage.setItem( "albums", JSON.stringify( albumList ))
 
     const history = useHistory();
@@ -19,9 +23,11 @@ export default function SingIn() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        // TODO:
+        // The API URL should be a global variable
         fetch('https://mastersound-backend.azurewebsites.net/api/auth/login', {
             method: 'post',
-            mode: 'cors', 
+            mode: 'cors',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -33,39 +39,39 @@ export default function SingIn() {
                 console.log('Success:', response);
                 history.push('/home');
             }
-        } 
+        }
     )};
 
     return(
-        
+
         <main className='mainSignIn'>
         <img src={Logo} alt='Logo' />
         <form onSubmit={handleSubmit} className='mainSignIn__form'>
             <label>e-mail</label>
             <Input
-                type='email' 
-                placeholder='e-mail' 
+                type='email'
+                placeholder='e-mail'
                 name='email'
                 onChange={(e) => setEmail(e.target.value)}
-                value={email} 
+                value={email}
             />
             <label>Password</label>
             <Input
-                type='password' 
-                placeholder='Password' 
-                name='password' 
+                type='password'
+                placeholder='Password'
+                name='password'
                 onChange={(e) => setPassword(e.target.value)}
-                value={password} 
-            />   
+                value={password}
+            />
             <div className="theme-switch-wrapper">
                 <p>Mantener la sesion abierta</p>
                 <label className="theme-switch">
                 <input type="checkbox" id="checkbox" />
                     <div className="slider round"></div>
                 </label>
-            </div>    
+            </div>
             <ButtonWhite text='Iniciar Sesion' />
-            
+
             <section className='mainSignIn__form--link'>
                 <Link to='/'>Olvide mi contraseña</Link>
                 <Link to='/register'>Crear una cuenta</Link>

@@ -4,9 +4,14 @@ import { Link } from 'react-router-dom';
 import '../styles/componentsStyles/ArtistImage.scss'
 
 const ArtistImage = ({ data }) => {
+    // TODO:
+    // nameArtists is a array but in the HTML show as string
     const nameArtists = data.artists.map((data) => {
         return data.artist_name;
     })
+
+    // TODO:
+    // ArtistPortrait is a array but in the HTML show as string
     const ArtistPortrait = data.artists.map((data) => {
         return data.cover_image_url;
     })

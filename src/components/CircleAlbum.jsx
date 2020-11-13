@@ -5,6 +5,8 @@ import '../styles/componentsStyles/CircleAlbum.scss'
 
 
 const CircleAlbum = ({data}) => {
+    // TODO:
+    // nameArtists is a array but in the HTML show as string
     const nameArtists = data.artists.map((data) => {
         return data.artist_name;
     })

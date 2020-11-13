@@ -21,7 +21,7 @@ class Playbar extends React.Component {
         super(props);
         this.state = { play: false };
       };
-    
+
     componentWillReceiveProps() {
         this.setState({ play: true });
     };
@@ -41,7 +41,7 @@ class Playbar extends React.Component {
     componentWillUnmount() {
         this.audio.removeEventListener("timeupdate", () => {});
     }
-        
+
     positionHandle = (position) => {
         let timelineWidth = this.timeline.offsetWidth;
         let handleLeft = position - this.timeline.offsetLeft;
@@ -55,12 +55,12 @@ class Playbar extends React.Component {
             this.handle.style.offsetWidth = timelineWidth + "px";
         }
     };
-    
+
     mouseMove = (e) => {
         this.positionHandle(e.pageX);
         this.audio.currentTime = ((e.pageX - this.timeline.offsetLeft) / this.timeline.offsetWidth) * this.audio.duration;
     };
-    
+
     mouseUp = (e) => {
         window.removeEventListener('mousemove', this.mouseMove);
         window.removeEventListener('mouseup', this.mouseUp);
@@ -121,19 +121,20 @@ class Playbar extends React.Component {
                 <PlaypauseControl icon={<SongsIcon />} event={()=>{document.getElementById('navbar').style.height = "80%";}} classname='play-pause__btn'/>
                 <PlaybarControl icon={<RadioIcon />} classname='playbar__nav-btn' />
                 <PlaybarControl icon={<BellIcon />} classname='playbar__nav-btn' />
-            </div>            
+            </div>
             <div id='navbar' className="playbar__overlay">
                 <div className="playbar__overlay-content">
                     <audio ref={(audio) => { this.audio = audio }} className="Player__Style" controls hidden={true}>
                         <source src="https://p.scdn.co/mp3-preview/9a19a5cf5a03b4b67708275560965f9162913e10?cid=aba92b636b61480c992f35aa022405f7" type="audio/ogg" />
                     </audio>
                     <div className="playbar__overlay-content--btn">
+                        {/* It's bad practice setting directly other element inside another component */}
                         <PlaybarControl icon={<BackIcon />} event={()=>{document.getElementById('navbar').style.height = "0%";}} classname='playbar__btn' />
                     </div>
-                    <div className="playbar__overlay-track">  
-                        <CircleTrack artist='Artic Monkeys' image={Album} song='Arabella' />                      
+                    <div className="playbar__overlay-track">
+                        <CircleTrack artist='Artic Monkeys' image={Album} song='Arabella' />
                     </div>
-                    <div className="playbar__overlay-controls">                        
+                    <div className="playbar__overlay-controls">
                         <PlaybarControl icon={<OptionsIcon />} classname='playbar__btn' />
                         <PlaybarControl icon={<DownloadItemsIcon />} classname='playbar__btn' />
                         <PlaybarControl icon={<LoadingIcon />} classname='playbar__btn' />
@@ -143,21 +144,21 @@ class Playbar extends React.Component {
                         <PlaybarControl icon={<BackwardIcon />} classname='playbar__btn' />
                         <PlaypauseControl icon={!this.state.play ? <PlayIcon/>: <PauseIcon/>} event={this.play} classname='play-pause__btn' />
                         <PlaybarControl icon={<ForwardIcon />} classname='playbar__btn' />
-                    </div>                        
+                    </div>
                     <div className="playbar__center-progress">
                         <p>{currentTime}</p>
                         <div id="timeline" onClick={this.mouseMove} ref={(timeline) => { this.timeline = timeline }} className="playbar__center-progress--bar">
                             <div id="handle" onMouseDown={this.mouseDown} ref={(handle) => { this.handle = handle }} className="playbar__center-progress--meter" />
                         </div>
                         <p>{duration}</p>
-                    </div>  
+                    </div>
                 </div>
             </div>
-            
-            {/*()=>{         
-                let audioPlayer; 
-                let trackList; 
-                let currentTrack = 0;     
+
+            {/*()=>{
+                let audioPlayer;
+                let trackList;
+                let currentTrack = 0;
                 const init = (playerElement) => {
                     trackList = JSON.parse(playerElement.textContent);
                     audioPlayer = new Audio();

@@ -9,13 +9,17 @@ const size = {
     height: 300,
 };
 const view = 'list'; // or 'coverart'
-const theme = 'black'; // or 'white' 
+const theme = 'black'; // or 'white'
 
 function InfoAlbum({ data }) {
+    // TODO:
+    // nameArtists is a array but in the HTML show as string
     const nameArtists = data.artists.map((data) => {
         return data.artist_name;
     })
 //----------------------getting songs from local storage-----------------------//
+    // TODO:
+    // localStorage is great but is limited for handle the global state I recommend use React Context or Redux
     const musicLocalstorage = JSON.parse( localStorage.getItem("SongsList"))
     const idAlbum = data.spt_album_id;
 
@@ -28,11 +32,11 @@ function InfoAlbum({ data }) {
                     <p className='InfoAlbum__Subtitle--NameAlbum'>{data.album_name}</p>
                     <p className='InfoAlbum__Subtitle--Artist'>{nameArtists}</p>
                     <p className='InfoAlbum__Subtitle--Description'>{data.name}</p>
-                        <MySpotifyPlayer 
+                        <MySpotifyPlayer
                             uri= {`spotify:album:${idAlbum}`}
                             size={size}
                             view={view}
-                            theme={theme} 
+                            theme={theme}
                         />
                         {
                             musicLocalstorage.map( (item) => (
@@ -44,5 +48,5 @@ function InfoAlbum({ data }) {
         </Fragment>
     );
 }
- 
+
 export default InfoAlbum;
